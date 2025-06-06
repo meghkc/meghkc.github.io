@@ -53,7 +53,7 @@ To update the website:
 For questions or collaboration inquiries, contact me at:
 - Email: [meghbaha@buffalo.edu](mailto:meghbaha@buffalo.edu) or [kc.megh2048@gmail.com](mailto:kc.megh2048@gmail.com)
 - Phone: (435) 881-2066
-- Profiles: [LinkedIn](https://www.linkedin.com/in/megh-bahadur-kc) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
+- Profiles: [LinkedIn](https://www.linkedin.com/in/megh-kc-2015/) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
 
 ## License
 © 2025 Megh KC. All rights reserved. Content may not be reproduced without permission.
