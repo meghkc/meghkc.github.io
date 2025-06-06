@@ -30,32 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
             link.setAttribute('aria-selected', 'true');
             const panelId = link.getAttribute('aria-controls');
-            document.getElementById(panelId).classList.add('active');
+            const panel = document.getElementById(panelId);
+            if (panel) {
+                panel.classList.add('active');
+            }
 
-            // Ensure nested tabs are initialized if Research Outreach is selected
-            const nestedTabLinks = document.querySelectorAll('.nested-tab-link');
-            const nestedTabPanels = document.querySelectorAll('.nested-tab-panel');
-            if (nestedTabLinks.length > 0) {
-                nestedTabLinks.forEach(l => {
-                    if (l.classList.contains('active')) {
-                        const nestedPanelId = l.getAttribute('aria-controls');
-                        document.getElementById(nestedPanelId).classList.add('active');
-                    }
-                });
+            // Initialize nested tabs if Research Outreach is selected
+            if (panelId === 'outreach-panel') {
+                const defaultNestedTab = document.querySelector('.nested-tab-link.active');
+                if (defaultNestedTab) {
+                    const nestedPanelId = defaultNestedTab.getAttribute('aria-controls');
+                    document.getElementById(nestedPanelId).classList.add('active');
+                }
             }
         });
     });
 
     // Nested tab functionality (for Research Outreach sub-sections)
     const nestedTabLinks = document.querySelectorAll('.nested-tab-link');
-    const nestedTabPanels = document.querySelectorAll('.nested-tab-panel');
-
     nestedTabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            // Find the closest nested-tab-content to scope the operation
+            // Scope to the specific nested-tab-content
             const nestedTabContent = link.closest('.nested-tab-content');
-            const siblingLinks = nestedTabContent.parentElement.querySelectorAll('.nested-tab-link');
+            if (!nestedTabContent) return;
+
+            const siblingLinks = nestedTabContent.previousElementSibling.querySelectorAll('.nested-tab-link');
             const siblingPanels = nestedTabContent.querySelectorAll('.nested-tab-panel');
 
             // Remove active class from all sibling links and panels
@@ -73,8 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (panel) {
                 panel.classList.add('active');
             } else {
-                console.error(`Panel with ID ${panelId} not found.`);
+                console.error(`Nested panel with ID ${panelId} not found.`);
             }
         });
     });
+
+    // Initial load: Trigger the default main tab to ensure nested tabs are initialized
+    const defaultMainTab = document.querySelector('.tab-link.active');
+    if (defaultMainTab) {
+        defaultMainTab.click();
+    }
 });

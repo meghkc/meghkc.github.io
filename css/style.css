@@ -14,23 +14,27 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 20px;
+    background-image: url('../assets/background.JPG'); /* Default background */
 }
 
 /* Specific background images for each page */
-body:where([title="Home - Megh Bahadur KC"]) {
+body.home-page {
     background-image: url('../assets/background.JPG');
 }
 
-body:where([title="About - Megh Bahadur KC"]) {
+body.about-page {
     background-image: url('../assets/about_me_background.JPG');
 }
 
-body:where([title="Publications - Megh Bahadur KC"]) {
+body.publications-page {
     background-image: url('../assets/publication_background.JPG');
 }
 
-/* Default background for other pages */
-body:not(:where([title="Home - Megh Bahadur KC"], [title="About - Megh Bahadur KC"], [title="Publications - Megh Bahadur KC"])) {
+body.research-page {
+    background-image: url('../assets/background.JPG');
+}
+
+body.contact-page {
     background-image: url('../assets/background.JPG');
 }
 
