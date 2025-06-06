@@ -9,12 +9,29 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-image: url('../assets/background.JPG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 20px;
+}
+
+/* Specific background images for each page */
+body:where([title="Home - Megh Bahadur KC"]) {
+    background-image: url('../assets/background.JPG');
+}
+
+body:where([title="About - Megh Bahadur KC"]) {
+    background-image: url('../assets/about_me_background.JPG');
+}
+
+body:where([title="Publications - Megh Bahadur KC"]) {
+    background-image: url('../assets/publication_background.JPG');
+}
+
+/* Default background for other pages */
+body:not(:where([title="Home - Megh Bahadur KC"], [title="About - Megh Bahadur KC"], [title="Publications - Megh Bahadur KC"])) {
+    background-image: url('../assets/background.JPG');
 }
 
 header {
