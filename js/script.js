@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Initialize nested tabs if Research Outreach is selected
             if (panelId === 'outreach-panel') {
-                const defaultNestedTab = document.querySelector('.nested-tab-link.active');
+                const defaultNestedTab = document.querySelector('#outreach-panel .nested-tab-link.active');
                 if (defaultNestedTab) {
                     const nestedPanelId = defaultNestedTab.getAttribute('aria-controls');
                     document.getElementById(nestedPanelId).classList.add('active');
@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const nestedTabContent = link.closest('.nested-tab-content');
             if (!nestedTabContent) return;
 
-            const siblingLinks = nestedTabContent.previousElementSibling.querySelectorAll('.nested-tab-link');
+            const nestedTabs = nestedTabContent.previousElementSibling;
+            const siblingLinks = nestedTabs.querySelectorAll('.nested-tab-link');
             const siblingPanels = nestedTabContent.querySelectorAll('.nested-tab-panel');
 
             // Remove active class from all sibling links and panels
