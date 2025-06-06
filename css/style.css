@@ -36,6 +36,10 @@ body.research-page {
     background-image: url('../assets/research_section_image.JPG');
 }
 
+body.skills-awards-page {
+    background-image: url('../assets/skills_awards_background.JPG');
+}
+
 body.contact-page {
     background-image: url('../assets/background.JPG');
 }
