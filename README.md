@@ -56,5 +56,5 @@ For questions or collaboration inquiries, contact me at:
 - Profiles: [LinkedIn](https://www.linkedin.com/in/megh-bahadur-kc) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
 
 ## License
-© 2025 Megh Bahadur KC. All rights reserved. Content may not be reproduced without permission.
+© 2025 Megh KC. All rights reserved. Content may not be reproduced without permission.
 
