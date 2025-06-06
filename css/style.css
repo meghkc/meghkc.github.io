@@ -69,6 +69,13 @@ h3 {
     margin-bottom: 10px;
 }
 
+h4 {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 ul {
     list-style-type: disc;
     margin-left: 20px;
@@ -103,7 +110,7 @@ footer {
     color: #666;
 }
 
-/* About page tab styles */
+/* Main tab styles (applies to About, Publications, Research) */
 .about-tabs {
     display: flex;
     justify-content: center;
@@ -140,6 +147,45 @@ footer {
     display: block;
 }
 
+/* Nested tab styles (for Research Outreach sub-sections) */
+.nested-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.nested-tabs a {
+    margin: 0 10px;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: normal;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.nested-tabs a:hover {
+    text-decoration: underline;
+}
+
+.nested-tabs a.active {
+    border-bottom: 2px solid #0066cc;
+}
+
+.nested-tab-content {
+    margin-top: 15px;
+}
+
+.nested-tab-panel {
+    display: none;
+}
+
+.nested-tab-panel.active {
+    display: block;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
     h1 {
@@ -157,6 +203,15 @@ footer {
         align-items: center;
     }
     .about-tabs a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nested-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nested-tabs a {
         margin: 5px 0;
         width: 100%;
         text-align: center;
