@@ -20,7 +20,7 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent for readability */
+    background-color: rgba(244, 244, 244, 0.9);
     border-bottom: 1px solid #ddd;
 }
 
@@ -47,7 +47,7 @@ nav a:hover, nav a[aria-current="page"] {
 main {
     max-width: 800px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
 }
@@ -98,9 +98,46 @@ ul {
 footer {
     text-align: center;
     padding: 20px;
-    color: #666;
-    background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent for readability */
+    background-color: rgba(244, 244, 244, 0.9);
     border-top: 1px solid #ddd;
+    color: #666;
+}
+
+/* About page tab styles */
+.about-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-tabs a {
+    margin: 0 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.about-tabs a:hover {
+    text-decoration: underline;
+}
+
+.about-tabs a.active {
+    border-bottom: 2px solid #0066cc;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
 }
 
 /* Responsive design */
@@ -114,5 +151,14 @@ footer {
     }
     .profile-img {
         max-width: 150px;
+    }
+    .about-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-tabs a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
     }
 }
