@@ -1,0 +1,246 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20px;
+    background-image: url('../assets/background.JPG'); /* Default background */
+}
+
+/* Specific background images for each page */
+body.home-page {
+    background-image: url('../assets/background.JPG');
+}
+
+body.about-page {
+    background-image: url('../assets/about_me_background.JPG');
+}
+
+body.publications-page {
+    background-image: url('../assets/publication_background.JPG');
+    /* Debug: Add a fallback color to verify the selector */
+    background-color: #ffcccc; /* Light red if image fails */
+}
+
+body.research-page {
+    background-image: url('../assets/research_section_image.JPG');
+}
+
+body.skills-awards-page {
+    background-image: url('../assets/skills_awards_background.JPG');
+}
+
+body.contact-page {
+    background-image: url('../assets/background.JPG');
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #0066cc;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.publication-list li {
+    margin-bottom: 15px;
+}
+
+.publication-list a {
+    margin-left: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.publication-list a:hover {
+    text-decoration: underline;
+}
+
+.profile-img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    border-top: 1px solid #ddd;
+    color: #666;
+}
+
+/* Main tab styles (applies to About, Publications, Research) */
+.about-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-tabs a {
+    margin: 0 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.about-tabs a:hover {
+    text-decoration: underline;
+}
+
+.about-tabs a.active {
+    border-bottom: 2px solid #0066cc;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Nested tab styles (for Research Outreach sub-sections) */
+.nested-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.nested-tabs a {
+    margin: 0 10px;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: normal;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.nested-tabs a:hover {
+    text-decoration: underline;
+}
+
+.nested-tabs a.active {
+    border-bottom: 2px solid #0066cc;
+}
+
+.nested-tab-content {
+    margin-top: 15px;
+}
+
+.nested-tab-panel {
+    display: none;
+}
+
+.nested-tab-panel.active {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .profile-img {
+        max-width: 150px;
+    }
+    .about-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-tabs a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nested-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nested-tabs a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
