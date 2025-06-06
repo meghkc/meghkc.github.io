@@ -9,14 +9,18 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background-image: url('../assets/background.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 20px;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent for readability */
     border-bottom: 1px solid #ddd;
 }
 
@@ -43,6 +47,9 @@ nav a:hover, nav a[aria-current="page"] {
 main {
     max-width: 800px;
     margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 section {
@@ -90,8 +97,9 @@ ul {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     color: #666;
+    background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent for readability */
     border-top: 1px solid #ddd;
 }
 
