@@ -18,7 +18,7 @@ The website serves as a professional portfolio to:
 
 ## Contact
 For questions or collaboration inquiries, contact me at:
-- Email: [meghbaha@buffalo.edu](mailto:meghbaha@buffalo.edu) or [kc.megh2048@gmail.com](mailto:kc.megh2048@gmail.com)
+- Email: [meghbaha@buffalo.edu](mailto:meghbaha@buffalo.edu)
 - Address: 212 Ketter Hall, Buffalo, NY, 14260
 - Profiles: [LinkedIn](https://www.linkedin.com/in/megh-kc-2015/) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
 
