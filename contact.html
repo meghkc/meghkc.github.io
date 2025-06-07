@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Megh Bahadur KC</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="contact-page">
@@ -21,13 +19,20 @@
     <main>
         <section>
             <h2>Contact</h2>
-            <p>Address: 212 Ketter Hall, Buffalo, NY, 14260</p>
-            <p>Email: <a href="mailto:meghbaha@buffalo.edu">meghbaha@buffalo.edu</a> | <a href="mailto:kc.megh2048@gmail.com">kc.megh2048@gmail.com</a></p>
-            <p>Profiles:</p>
+            <form action="https://formspree.io/f/xqabegaq" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+            <p>Or connect via:</p>
             <ul>
-                <li><a href="https://www.linkedin.com/in/megh-kc-2015/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/meghkc" target="_blank">GitHub</a></li>
-                <li><a href="https://www.researchgate.net/profile/Megh-KC" target="_blank">ResearchGate</a></li>
+                <li><a href="https://www.linkedin.com/in/megh-kc-2015/">LinkedIn</a></li>
+                <li><a href="https://github.com/meghkc">GitHub</a></li>
+                <li><a href="https://www.researchgate.net/profile/Megh-KC">ResearchGate</a></li>
             </ul>
         </section>
     </main>
