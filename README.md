@@ -23,5 +23,7 @@ For questions or collaboration inquiries, contact me at:
 - Profiles: [LinkedIn](https://www.linkedin.com/in/megh-kc-2015/) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
 
 ## License
-© 2025 Megh KC. All rights reserved. Content may not be reproduced without permission.
+The website's source code is distributed under the MIT License. Text and images
+are licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License. See [LICENSE](LICENSE) for details.
 
