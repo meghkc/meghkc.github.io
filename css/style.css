@@ -28,8 +28,8 @@ body.about-page {
 
 body.publications-page {
     background-image: url('../assets/publication_background.JPG');
-    /* Debug: Add a fallback color to verify the selector */
-    background-color: #ffcccc; /* Light red if image fails */
+    /* Fallback color if the image fails to load */
+    background-color: #f5f5f5;
 }
 
 body.research-page {
