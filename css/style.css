@@ -331,3 +331,58 @@ header {
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slide img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.slide img:first-child {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #005bb5;
+}
+
+.slide-description {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
