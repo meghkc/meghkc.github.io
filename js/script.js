@@ -124,4 +124,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show the first slide on load
     showSlide(slideIndex);
+
+   // Profile slideshow functionality
+    let profileSlideIndex = 0;
+    const profileSlides = document.querySelectorAll('.profile-slideshow .slide-img');
+    const slideshowInterval = 3000; // Change image every 3 seconds
+
+    function showProfileSlide(index) {
+        if (index >= profileSlides.length) profileSlideIndex = 0;
+        if (index < 0) profileSlideIndex = profileSlides.length - 1;
+        profileSlides.forEach(slide => slide.style.display = 'none');
+        profileSlides[profileSlideIndex].style.display = 'block';
+    }
+
+    function startProfileSlideshow() {
+        showProfileSlide(profileSlideIndex);
+        profileSlideIndex++;
+        setTimeout(startProfileSlideshow, slideshowInterval);
+    }
+
+    // Start the slideshow on page load
+    startProfileSlideshow(); 
 });
