@@ -98,4 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (defaultMainTab) {
         defaultMainTab.click();
     }
+
+    // Slideshow functionality
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide img');
+    const description = document.querySelector('.slide-description');
+
+    function showSlide(index) {
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[slideIndex].style.display = 'block';
+        description.textContent = slides[slideIndex].getAttribute('data-description');
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        slideIndex--;
+        showSlide(slideIndex);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        slideIndex++;
+        showSlide(slideIndex);
+    });
+
+    // Show the first slide on load
+    showSlide(slideIndex);
 });
