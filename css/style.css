@@ -386,3 +386,22 @@ header {
     font-style: italic;
     color: #555;
 }
+
+.profile-slideshow {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding-bottom: 10px; /* Adds space below to prevent overlap with text */
+}
+
+.slide-img {
+    display: none;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.slide-img:first-child {
+    display: block;
+}
