@@ -6,6 +6,8 @@
     <meta name="description" content="Megh Bahadur KC - Ph.D. candidate in Civil Engineering specializing in transportation systems and smart mobility.">
     <title>Home - Megh Bahadur KC</title>
     <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" defer></script> 
 </head>
 <body class="home-page"> 
     <header>
@@ -257,6 +259,65 @@
                         </div>
                         <button class="next" aria-label="Next Image">&#10095;</button>
                         <p class="slide-description">My first presentation at TRB 2022.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Impact Section -->
+        <section class="research-impact-section">
+            <h2>Research Impact</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card highlight">
+                    <div class="metric-number" data-target="56">0</div>
+                    <div class="metric-label">Total Citations</div>
+                    <div class="metric-icon">📊</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="4">0</div>
+                    <div class="metric-label">H-Index</div>
+                    <div class="metric-icon">📈</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="365">0</div>
+                    <div class="metric-label">RI Score</div>
+                    <div class="metric-icon">🔬</div>
+                </div>
+                <div class="metric-card highlight">
+                    <div class="metric-number" data-target="137065">0</div>
+                    <div class="metric-label">Total Reads</div>
+                    <div class="metric-icon">👁️</div>
+                </div>
+            </div>
+
+            <div class="impact-visualization">
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h4>Citations Growth</h4>
+                        <canvas id="citationsChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Publications Timeline</h4>
+                        <canvas id="publicationsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-highlights">
+                <h4>Research Highlights</h4>
+                <div class="highlight-grid"> 
+                    <div class="highlight-item">
+                        <strong>17</strong> Conference Presentations
+                    </div>
+                    <div class="highlight-item">
+                        <strong>6+</strong> Journal Publications
+                    </div>
+                    <div class="highlight-item">
+                        <strong>3</strong> Major Research Projects
+                    </div>
+                    <div class="highlight-item">
+                        <strong>NREL</strong> Collaboration
                     </div>
                 </div>
             </div>
