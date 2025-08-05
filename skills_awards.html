@@ -6,8 +6,10 @@
     <meta name="description" content="Highlights Megh Bahadur KC's technical skills and academic awards.">
     <title>Skills & Awards - Megh Bahadur KC</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 </head>
-<body class="skills-awards-page">
+<body class="skills-awards-page"> 
     <header>
         <h1>Megh Bahadur KC</h1>
         <nav>
@@ -24,31 +26,274 @@
             <h2>Skills & Awards</h2>
             <nav class="about-tabs" role="tablist">
                 <a href="#skills-panel" class="tab-link active" data-tab="skills-panel" role="tab" aria-controls="skills-panel" aria-selected="true" id="skills-tab">Skills</a>
+                <a href="#research-metrics" class="tab-link" data-tab="research-metrics" role="tab" aria-controls="research-metrics" aria-selected="false" id="metrics-tab">Research Impact</a>
                 <a href="#awards-panel" class="tab-link" data-tab="awards-panel" role="tab" aria-controls="awards-panel" aria-selected="false" id="awards-tab">Awards</a>
             </nav>
+            
             <div class="tab-content">
+                <!-- Skills Panel with Interactive Visualizations -->
                 <div id="skills-panel" class="tab-panel active" role="tabpanel" aria-labelledby="skills-tab">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Programming Language: Python, R, GAMS, Gurobi </li>
-                        <li>Mapping & Visualization: ArcGIS Pro, QGIS, ArcPy, matplotlib, seaborn</li>
-                        <li>Machine/ Deep Learning Framework: SVM, SVD, DQN</li>
-                        <li>Transportation demand modeling: CUBE, Synchro, TransCAD</li>
-                        <li>Project management: Microsoft Project</li>
-                        <li>Others: Jupyter, Pandas, NumPy, scikit-learn, Web scraping, NLP and LLM</li>
-                    </ul>
+                    <h3>Technical Skills</h3>
+                    
+                    <!-- Skills Overview Cards -->
+                    <div class="skills-overview">
+                        <div class="skill-card">
+                            <h4>Programming</h4>
+                            <div class="skill-rating">
+                                <span class="rating-value">3.5/5</span>
+                                <div class="rating-bar">
+                                    <div class="rating-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>GIS & Mapping</h4>
+                            <div class="skill-rating">
+                                <span class="rating-value">4/5</span>
+                                <div class="rating-bar">
+                                    <div class="rating-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Transportation Modeling</h4>
+                            <div class="skill-rating">
+                                <span class="rating-value">4/5</span>
+                                <div class="rating-bar">
+                                    <div class="rating-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Project Management</h4>
+                            <div class="skill-rating">
+                                <span class="rating-value">4/5</span>
+                                <div class="rating-bar">
+                                    <div class="rating-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Charts Section -->
+                    <div class="charts-container">
+                        <div class="chart-wrapper">
+                            <h4>Skills Proficiency Radar</h4>
+                            <canvas id="skillsRadarChart"></canvas>
+                        </div>
+                        <div class="chart-wrapper">
+                            <h4>Years of Experience</h4>
+                            <canvas id="experienceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Skills with Progress Bars -->
+                    <div class="detailed-skills">
+                        <h4>Technology Stack</h4>
+                        <div class="skill-category">
+                            <h5>Programming Languages</h5>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="70">
+                                        <span class="progress-text">3.5 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">R</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="60">
+                                        <span class="progress-text">3 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">GAMS</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="80">
+                                        <span class="progress-text">4 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Gurobi</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="80">
+                                        <span class="progress-text">4 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h5>GIS & Visualization</h5>
+                            <div class="skill-item">
+                                <span class="skill-name">ArcGIS Pro / QGIS</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="100">
+                                        <span class="progress-text">6 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">ArcPy</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="80">
+                                        <span class="progress-text">4 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Matplotlib / Seaborn</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="70">
+                                        <span class="progress-text">3.5 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h5>Machine Learning</h5>
+                            <div class="skill-item">
+                                <span class="skill-name">SVM / SVD / DQN</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="60">
+                                        <span class="progress-text">3 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="60">
+                                        <span class="progress-text">3 years</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Research Impact Metrics Panel -->
+                <div id="research-metrics" class="tab-panel" role="tabpanel" aria-labelledby="metrics-tab">
+                    <h3>Research Impact Metrics</h3>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card highlight">
+                            <div class="metric-number" data-target="56">0</div>
+                            <div class="metric-label">Total Citations</div>
+                            <div class="metric-icon">📊</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number" data-target="4">0</div>
+                            <div class="metric-label">H-Index</div>
+                            <div class="metric-icon">📈</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number" data-target="365">0</div>
+                            <div class="metric-label">RI Score</div>
+                            <div class="metric-icon">🔬</div>
+                        </div>
+                        <div class="metric-card highlight">
+                            <div class="metric-number" data-target="137065">0</div>
+                            <div class="metric-label">Total Reads</div>
+                            <div class="metric-icon">👁️</div>
+                        </div>
+                    </div>
+
+                    <div class="impact-visualization">
+                        <div class="charts-grid">
+                            <div class="chart-container">
+                                <h4>Citations Growth</h4>
+                                <canvas id="citationsChart"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <h4>Publications Timeline</h4>
+                                <canvas id="publicationsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="research-highlights">
+                        <h4>Research Highlights</h4>
+                        <div class="highlight-grid"> 
+                            <div class="highlight-item">
+                                <strong>17</strong> Conference Presentations
+                            </div>
+                            <div class="highlight-item">
+                                <strong>6+</strong> Journal Publications
+                            </div>
+                            <div class="highlight-item">
+                                <strong>3</strong> Major Research Projects
+                            </div>
+                            <div class="highlight-item">
+                                <strong>NREL</strong> Collaboration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards Panel with Timeline -->
                 <div id="awards-panel" class="tab-panel" role="tabpanel" aria-labelledby="awards-tab">
-                    <h3>Awards</h3>
-                    <ul>
-                        <li><b>Winner</b>- Institute of Transportation Engineers (ITE) Student Research Presentation Competition, Utah, 2024</li>
-                        <li><b>Winner</b>- Prakash S Lad Scholarship for Courage and Perseverance in the College of Engineering (ENGR), Utah State University, 2023 ($2000.00)</li>
-                        <li>Best student term project on data science in practice titled "<i>Fake News Detection: Investigating ChatGPT</i>."</li>
-                        <li>Dean listed and University topper in MSc Construction Management, Pokhara University, 2021</li>
-                        <li>Outstanding MSc Student of the Year, Lumbini College of Engineering and Management, Pokhara University, 2019.</li>
-                        <li>Ranked top 4 in BE, Civil Engineering, Tribhuvan University (TU), 2013</li>
-                        <li>Merit-based government scholarship (2009-2013) by the institute of Engineering, Nepal</li>
-                    </ul>
+                    <h3>Awards & Recognition</h3>
+                    
+                    <div class="awards-timeline">
+                        <div class="timeline-item" data-year="2024">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>ITE Student Research Competition Winner</h4>
+                                <p>Institute of Transportation Engineers, Utah</p>
+                                <span class="award-type winner">Winner</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-year="2023">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Prakash S Lad Scholarship</h4>
+                                <p>Utah State University - $2,000</p>
+                                <span class="award-type scholarship">Scholarship</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-year="2021">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>University Topper & Dean's List</h4>
+                                <p>MSc Construction Management, Pokhara University</p>
+                                <span class="award-type academic">Academic Excellence</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-year="2019">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Outstanding MSc Student of the Year</h4>
+                                <p>Lumbini College of Engineering and Management</p>
+                                <span class="award-type academic">Academic Excellence</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-year="2013">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Top 4 in BE Civil Engineering</h4>
+                                <p>Tribhuvan University</p>
+                                <span class="award-type academic">Academic Excellence</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-year="2009-2013">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Government Merit Scholarship</h4>
+                                <p>Institute of Engineering, Nepal</p>
+                                <span class="award-type scholarship">Scholarship</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,18 +303,16 @@
             <a href="https://www.linkedin.com/in/megh-kc-2015/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                 <img src="assets/linkedin_icon.JPG" alt="LinkedIn" width="24" height="24">
             </a>
-
             <a href="https://github.com/meghkc" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                 <img src="assets/github_icon.JPG" alt="GitHub" width="24" height="24">
             </a>
-            
             <a href="https://www.researchgate.net/profile/Megh-KC" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate Profile">
                 <img src="assets/researchgate_icon.JPG" alt="ResearchGate" width="24" height="24">
             </a>
         </div>
-        
         <p>© 2025 Megh KC. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/skills-visualization.js"></script>
 </body>
 </html>
