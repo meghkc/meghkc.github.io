@@ -646,11 +646,37 @@ button:hover {
     .skill-item {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
     }
     
     .skill-name {
         min-width: auto;
         margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .skill-progress {
+        width: 100%;
+    }
+    
+    .progress-bar {
+        min-height: 25px;
+        font-size: 0.8rem;
+    }
+    
+    /* Technology stack mobile improvements */
+    .detailed-skills {
+        margin-top: 1.5rem;
+    }
+    
+    .skill-category {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .skill-category h5 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
     }
     
     .timeline-item {
@@ -934,10 +960,21 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Small indicators for a more subtle look */
+.slideshow-indicator.small {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
 .slideshow-indicator.active {
     background: #0066cc;
     border-color: white;
     transform: scale(1.2);
+}
+
+.slideshow-indicator.small.active {
+    transform: scale(1.1); /* Less scale for small indicators */
 }
 
 .slideshow-indicator:hover {
@@ -1072,6 +1109,61 @@ header {
     
     .skill-card {
         padding: 1rem;
+    }
+    
+    /* Technology stack mobile fixes */
+    .detailed-skills h4 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-category h5 {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .skill-name {
+        min-width: auto;
+        font-size: 0.95rem;
+        text-align: center;
+        font-weight: 600;
+        color: #0066cc;
+    }
+    
+    .skill-progress {
+        width: 100%;
+        height: 30px;
+        border-radius: 15px;
+    }
+    
+    .progress-bar {
+        min-height: 30px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .progress-text {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
     
     /* Charts mobile optimization */
@@ -1377,9 +1469,19 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Small indicators for repositories section */
+.indicator.small {
+    width: 6px;
+    height: 6px;
+}
+
 .indicator.active {
     background: #0066cc;
     transform: scale(1.2);
+}
+
+.indicator.small.active {
+    transform: scale(1.1); /* Less scale for small indicators */
 }
 
 .indicator:hover {
@@ -1403,11 +1505,10 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Enhanced Education Panel - Swapped Layout */
+/* Enhanced Education Panel - Vertical Layout */
 .education-item {
-    display: grid;
-    grid-template-columns: 1fr 220px;  /* Content first, then image */
-    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
     margin-bottom: 3rem;
     background: white;
     padding: 2rem;
@@ -1439,20 +1540,19 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    justify-content: center;  /* Center content vertically */
+    margin-bottom: 2rem;  /* Space between content and image */
 }
 
 .education-image {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;  /* Center image vertically */
+    justify-content: center;  /* Center image horizontally */
 }
 
-/* University Logo - No badge needed */
+/* University Logo - Centered below content */
 .university-logo {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -1463,6 +1563,49 @@ header {
 .university-logo:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Certification and Affiliation Images */
+.certification-item, .affiliation-item {
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0066cc;
+}
+
+.affiliation-group {
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0066cc;
+}
+
+.certification-image, .affiliation-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.agency-logo {
+    max-width: 200px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 3px solid #f8f9fa;
+    background: white;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.agency-logo:hover {
+    transform: scale(1.05);
 }
 
 .education-header h4 {
