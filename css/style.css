@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body {
@@ -15,6 +15,39 @@ body {
     background-repeat: no-repeat;
     padding: 20px;
     background-image: url('../assets/background.JPG'); /* Default background */
+    /* Mobile performance optimization */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Touch device optimizations */
+.touch-device .slideshow-nav-left,
+.touch-device .slideshow-nav-right {
+    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+}
+
+.touch-device .slideshow-nav-left:hover,
+.touch-device .slideshow-nav-right:hover {
+    opacity: 1;
+}
+
+/* Improved touch targets */
+.touch-device button,
+.touch-device .tab-link,
+.touch-device .slideshow-indicator {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Mobile-first approach - disable fixed backgrounds on mobile for better performance */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+    }
 }
 
 /* Specific background images for each page */
@@ -603,8 +636,9 @@ button:hover {
     box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
 }
 
-/* Responsive Design */
+/* Enhanced Mobile Navigation */
 @media (max-width: 768px) {
+    /* Existing styles */
     .charts-container {
         grid-template-columns: 1fr;
     }
@@ -630,16 +664,59 @@ button:hover {
     .awards-timeline {
         padding: 1rem 0;
     }
+
+    /* Enhanced Navigation for Mobile */
+    header {
+        padding: 15px 10px;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    nav a {
+        padding: 8px 12px;
+        margin: 2px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        min-width: auto;
+        text-align: center;
+        display: inline-block;
+    }
+    
+    nav a:hover, nav a[aria-current="page"] {
+        background: #0066cc;
+        color: white;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 600px) {
     h1 {
         font-size: 2em;
     }
+    
+    /* Improved mobile navigation */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
     nav a {
         display: block;
-        margin: 10px 0;
+        margin: 5px 0;
+        width: 80%;
+        max-width: 200px;
+        text-align: center;
+        padding: 10px 15px;
     }
+    
     .profile-img {
         max-width: 150px;
     }
@@ -901,11 +978,76 @@ header {
     }
 }
 
+/* Mobile-first improvements */
 @media (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 16px; /* Better readability on mobile */
+    }
+    
+    header {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    main {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    
+    /* Mobile-friendly buttons and links */
+    button, .cv-link, nav a {
+        min-height: 44px; /* Touch target guidelines */
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+    
+    /* Improved tab navigation for mobile */
+    .about-tabs {
+        gap: 5px;
+        padding: 10px;
+    }
+    
+    .about-tabs a {
+        padding: 12px 8px;
+        min-height: 44px;
+        font-size: 0.9rem;
+    }
+    
+    /* Better spacing for mobile */
+    section {
+        margin-bottom: 25px;
+    }
+    
+    /* Contact form improvements */
+    form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    input, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
     .profile-slideshow {
         height: 280px;
         border-radius: 8px;
         border-width: 2px;
+        margin: 1rem auto;
     }
     
     .slideshow-indicators {
@@ -920,6 +1062,30 @@ header {
     .slideshow-caption {
         font-size: 0.8rem;
         padding: 1rem 0.8rem 0.8rem;
+    }
+    
+    /* Skills cards mobile optimization */
+    .skills-overview {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        padding: 1rem;
+    }
+    
+    /* Charts mobile optimization */
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .chart-wrapper {
+        padding: 1rem;
+    }
+    
+    .chart-wrapper canvas {
+        max-height: 250px;
     }
 }
 
@@ -1649,6 +1815,69 @@ header {
     
     .project-description p {
         font-size: 0.9rem;
+    }
+}
+
+/* Ultra-small devices (very small phones) */
+@media (max-width: 360px) {
+    body {
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    nav a {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .cv-link {
+        position: static;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .welcome-header {
+        text-align: center;
+    }
+}
+
+/* Large tablets and small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        max-width: 900px;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .skills-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1000px;
+    }
+    
+    .skills-overview {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
 }
 

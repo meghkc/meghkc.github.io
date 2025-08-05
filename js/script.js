@@ -1,10 +1,22 @@
 // Global variables
 let profileSlideTimer;
-let repositoryAutoScrollTimer;
+let repositoryAutoScrollTimer; 
+let isTouchDevice = false;
+
+// Detect touch device
+function detectTouchDevice() {
+    isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouchDevice) {
+        document.body.classList.add('touch-device');
+    }
+}
 
 // Main DOMContentLoaded Event - KEEP ONLY THIS ONE
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing page...');
+    
+    // Detect touch device first
+    detectTouchDevice();
     
     // Initialize smooth scrolling for navigation
     initializeSmoothScrolling();
@@ -40,7 +52,48 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize project gallery slideshow
     initializeProjectGallerySlideshow();
+    
+    // Add touch event listeners for mobile
+    if (isTouchDevice) {
+        addTouchSupport();
+    }
 });
+
+// Add touch support for mobile devices
+function addTouchSupport() {
+    // Add touch support for slideshow navigation
+    const slideshow = document.querySelector('.profile-slideshow');
+    if (slideshow) {
+        let startX = 0;
+        let endX = 0;
+        
+        slideshow.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+        });
+        
+        slideshow.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].screenX;
+            handleSwipe(startX, endX);
+        });
+        
+        function handleSwipe(startX, endX) {
+            const threshold = 50; // Minimum swipe distance
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    const nextBtn = document.querySelector('.slideshow-nav-right');
+                    if (nextBtn) nextBtn.click();
+                } else {
+                    // Swipe right - previous slide
+                    const prevBtn = document.querySelector('.slideshow-nav-left');
+                    if (prevBtn) prevBtn.click();
+                }
+            }
+        }
+    }
+}
 
 // Smooth scrolling for navigation links
 function initializeSmoothScrolling() {
