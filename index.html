@@ -4,7 +4,7 @@
     <title>Home - Megh Bahadur KC</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home-page">
+<body class="home-page"> 
     <header>
         <h1>Megh Bahadur KC</h1>
         <nav>
@@ -17,30 +17,202 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="welcome-section">
             <div class="welcome-header">
                 <h2>Welcome</h2>
                 <a href="assets/Megh_recent CV.pdf" download="Megh_recent CV.pdf" class="cv-link">Download CV</a>
             </div>
-            <p>I am a Ph.D. candidate in Civil Engineering, specializing in transportation systems and smart mobility. 
-                My research focuses on electric vehicle integration, transit scheduling optimization, and data-driven decision-making for sustainable transportation planning. 
-                Through a combination of operations research, Machine/ Deep Reinforcement Learning, and simulation modeling, I aim to develop innovative solutions for the evolving challenges in public 
-                transit and urban mobility.
-            <br>Explore my work to learn more about my academic journey, research projects, and publications.<br>
-            </p>
+            
+            <div class="welcome-content">
+                <p>I am a Ph.D. candidate in Civil Engineering, specializing in transportation systems and smart mobility. 
+                    My research focuses on electric vehicle integration, transit scheduling optimization, and data-driven decision-making for sustainable transportation planning. 
+                    Through a combination of operations research, Machine/ Deep Reinforcement Learning, and simulation modeling, I aim to develop innovative solutions for the evolving challenges in public 
+                    transit and urban mobility.
+                <br><br>Explore my work to learn more about my academic journey, research projects, and publications.
+                </p>
+            </div>
+            
+            <!-- Enhanced Profile Slideshow - Fixed Caption -->
             <div class="profile-slideshow">
-                <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" class="slide-img">
-                <img src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" class="slide-img">
-                <img src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" class="slide-img">
-                <img src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" class="slide-img">
-                <img src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" class="slide-img">
-                <img src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" class="slide-img">
-                <img src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" class="slide-img">
-                <img src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" class="slide-img">
+                <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" class="slide-img" data-caption="Appointment to the TRB Committee on Transportation and Sustainability, 2025">
+                <img src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" class="slide-img" data-caption="Exploring hydrogen fuel cell bus technology">
+                <img src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" class="slide-img" data-caption="Wireless charging electric bus demonstration @ ASPIRE USU">
+                <img src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" class="slide-img" data-caption="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University">
+                <img src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" class="slide-img" data-caption="Invited research presentation at UB ITE seminar, 2025">
+                <img src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" class="slide-img" data-caption="Field study of a hairpin bend in USA">
+                <img src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" class="slide-img" data-caption="Research poster on mode choice behavior for people with disabilities at TRB 2024">
+                <img src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" class="slide-img" data-caption="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience">
+                
+                <!-- Navigation Arrows -->
+                <button class="slideshow-nav-left" aria-label="Previous Image">‹</button>
+                <button class="slideshow-nav-right" aria-label="Next Image">›</button>
+                
+                <!-- Caption Overlay -->
+                <div class="slideshow-caption">
+                    Appointment to the TRB Committee on Transportation and Sustainability, 2025
+                </div>
+                
+                <!-- Slideshow Indicators -->
+                <div class="slideshow-indicators">
+                    <span class="slideshow-indicator active" data-slide="0"></span>
+                    <span class="slideshow-indicator" data-slide="1"></span>
+                    <span class="slideshow-indicator" data-slide="2"></span>
+                    <span class="slideshow-indicator" data-slide="3"></span>
+                    <span class="slideshow-indicator" data-slide="4"></span>
+                    <span class="slideshow-indicator" data-slide="5"></span>
+                    <span class="slideshow-indicator" data-slide="6"></span>
+                    <span class="slideshow-indicator" data-slide="7"></span>
+                </div>
             </div>
         </section>
+        
         <section>
             <h2>Highlights</h2>
+            
+            <!-- Featured GitHub Repositories Section -->
+            <div class="repositories-section">
+                <div class="repositories-header">
+                    <h3>🚀 Featured Projects & Repositories</h3>
+                    <p>Explore my open-source contributions and research tools</p>
+                </div>
+                <div class="repositories-container">
+                    <div class="repositories-scroll">
+                        <!-- Repository 1: NREL-eFRISM -->
+                        <div class="repository-card">
+                            <div class="repo-icon">🚛</div>
+                            <div class="repo-content">
+                                <h4>NREL-eFRISM</h4>
+                                <p>Electric Freight Truck Route Optimization with optimal charging station location selection in US freight networks using Variable Neighborhood Search metaheuristics.</p>
+                                <div class="repo-features">
+                                    <span class="feature-tag">Route Optimization</span>
+                                    <span class="feature-tag">Charging Scheduling</span>
+                                    <span class="feature-tag">Cost Minimization</span>
+                                </div>
+                                <div class="repo-footer">
+                                    <div class="repo-tech">
+                                        <span class="tech-badge python">🐍 Python</span>
+                                        <span class="category-badge">Opensource Tool</span>
+                                    </div>
+                                    <a href="https://github.com/meghkc/NREL-eFRISM" target="_blank" class="repo-link">
+                                        View Project <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repository 2: School Transport Electrification -->
+                        <div class="repository-card">
+                            <div class="repo-icon">🚌</div>
+                            <div class="repo-content">
+                                <h4>School Transport Electrification</h4>
+                                <p>Two-stage model for solving large school networks with routing and scheduling optimization for electric school bus systems with on-route charging plans.</p>
+                                <div class="repo-features">
+                                    <span class="feature-tag">Route Optimization</span>
+                                    <span class="feature-tag">Charging Management</span>
+                                    <span class="feature-tag">Metaheuristics</span>
+                                </div>
+                                <div class="repo-footer">
+                                    <div class="repo-tech">
+                                        <span class="tech-badge python">🐍 Python</span>
+                                        <span class="tech-badge gams">⚙️ GAMS/Gurobi</span>
+                                        <span class="category-badge">Research Tool</span>
+                                    </div>
+                                    <a href="https://github.com/meghkc/Multi_School_multi_school_routing_and_scheduling" target="_blank" class="repo-link">
+                                        View Project <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repository 3: Space Time Prism Model -->
+                        <div class="repository-card">
+                            <div class="repo-icon">♿</div>
+                            <div class="repo-content">
+                                <h4>Space Time Prism Accessibility Model</h4>
+                                <p>Understanding daily travel behavior of people with and without disabilities using Space Time Prism Model with automated ArcGIS Pro algorithms in arcpy environment.</p>
+                                <div class="repo-features">
+                                    <span class="feature-tag">Space Time Prism</span>
+                                    <span class="feature-tag">ArcPy Coding</span>
+                                    <span class="feature-tag">DPPA</span>
+                                </div>
+                                <div class="repo-footer">
+                                    <div class="repo-tech">
+                                        <span class="tech-badge jupyter">📓 Jupyter</span>
+                                        <span class="tech-badge arcgis">🗺️ ArcGIS Pro</span>
+                                        <span class="category-badge">Research Automation</span>
+                                    </div>
+                                    <a href="https://github.com/meghkc/Accessibility-Measures-by-using-Space-Time-Prism-Model" target="_blank" class="repo-link">
+                                        View Project <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repository 4: Deep Reinforcement Learning Framework -->
+                        <div class="repository-card">
+                            <div class="repo-icon">🚍</div>
+                            <div class="repo-content">
+                                <h4>DRL Transit Electrification Framework</h4>
+                                <p>PPO-based Deep Reinforcement Learning Framework for simultaneous fleet optimization and charging scheduling for multi-line bus transit systems in dynamic environments.</p>
+                                <div class="repo-features">
+                                    <span class="feature-tag">DRL Agent</span>
+                                    <span class="feature-tag">MILP</span>
+                                    <span class="feature-tag">Uncertainty</span>
+                                </div>
+                                <div class="repo-footer">
+                                    <div class="repo-tech">
+                                        <span class="tech-badge python">🐍 Python</span>
+                                        <span class="tech-badge gurobi">🔧 Gurobi</span>
+                                        <span class="category-badge">Transit Scheduling</span>
+                                    </div>
+                                    <a href="https://github.com/meghkc/RL-ESB" target="_blank" class="repo-link">
+                                        View Project <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repository 5: Smart Charging and V2G Framework -->
+                        <div class="repository-card">
+                            <div class="repo-icon">🔋</div>
+                            <div class="repo-content">
+                                <h4>Smart Charging & V2G Framework</h4>
+                                <p>Novel framework for integrated optimization of charging and V2G for electric school buses, considering time-of-use electricity prices and operational constraints.</p>
+                                <div class="repo-features">
+                                    <span class="feature-tag">Smart Charging</span>
+                                    <span class="feature-tag">V2G</span>
+                                    <span class="feature-tag">Revenue Optimization</span>
+                                </div>
+                                <div class="repo-footer">
+                                    <div class="repo-tech">
+                                        <span class="tech-badge python">🐍 Python</span>
+                                        <span class="tech-badge gams">⚙️ GAMS</span>
+                                        <span class="category-badge">Utility Tool</span>
+                                    </div>
+                                    <a href="https://github.com/meghkc/Strategic-Charging-Decision-enabling-V2G-School-Buses-and-Optimum-Battery-Size" target="_blank" class="repo-link">
+                                        View Project <span>→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scroll Navigation -->
+                    <div class="scroll-navigation">
+                        <button class="scroll-btn scroll-left" aria-label="Scroll Left">‹</button>
+                        <div class="scroll-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="scroll-btn scroll-right" aria-label="Scroll Right">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXISTING: News/Project Gallery Tabs -->
             <nav class="about-tabs" role="tablist">
                 <a href="#news-highlights-panel" class="tab-link active" role="tab" aria-controls="news-highlights-panel" aria-selected="true" id="news-highlights-tab">News/Highlights</a>
                 <a href="#project-gallery-panel" class="tab-link" role="tab" aria-controls="project-gallery-panel" aria-selected="false" id="project-gallery-tab">Project Gallery</a>
