@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
             initializeRepositoryScroll();
         }, 500);
         
+        // Initialize research impact metrics and charts on homepage
+        setTimeout(() => {
+            initializeResearchImpactChart();
+            initializeMetricsCounters();
+        }, 1000);
+        
     } else if (document.body.classList.contains('skills-awards-page')) {
         initializeSkillsAwardsTabs();
         
