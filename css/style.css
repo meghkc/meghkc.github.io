@@ -1490,6 +1490,350 @@ header {
     transform: translateX(3px);
 }
 
+/* Python Package Showcase Section */
+.package-showcase-section {
+    margin: 2rem 0 3rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid #0066cc;
+    position: relative;
+    overflow: hidden;
+}
+
+.package-showcase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #4da6ff, #00cc99);
+}
+
+.package-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.package-header h3 {
+    color: #0066cc;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0066cc, #4da6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.package-header p {
+    color: #666;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.package-main-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.package-main-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(77, 166, 255, 0.05));
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+.package-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.package-content h4 {
+    color: #0066cc;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.package-content > p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.package-ecosystem {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(0, 102, 204, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #0066cc;
+}
+
+.package-ecosystem h5 {
+    color: #0066cc;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.ecosystem-grid {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.ecosystem-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.ecosystem-icon {
+    color: #00cc99;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ecosystem-text {
+    line-height: 1.4;
+}
+
+.package-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.feature-tag-enhanced {
+    background: linear-gradient(135deg, #0066cc, #4da6ff);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-tag-enhanced:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+.package-installation {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(45, 45, 45, 0.95);
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.package-installation h5 {
+    color: #4da6ff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.install-commands {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.command-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+}
+
+.command-item code {
+    flex: 1;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.copy-btn {
+    background: #0066cc;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background: #004499;
+    transform: scale(1.05);
+}
+
+.copy-btn.copied {
+    background: #00cc99;
+    animation: copySuccess 0.3s ease;
+}
+
+@keyframes copySuccess {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.package-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.package-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.package-link.pypi {
+    background: linear-gradient(135deg, #0066cc, #4da6ff);
+    color: white;
+}
+
+.package-link.github {
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+}
+
+.package-link.demo {
+    background: linear-gradient(135deg, #00cc99, #00ff88);
+    color: white;
+}
+
+.package-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.package-link .link-icon {
+    font-size: 1.1rem;
+}
+
+/* Mobile Responsive Package Showcase */
+@media (max-width: 768px) {
+    .package-showcase-section {
+        margin: 1.5rem 0 2rem 0;
+        padding: 1.5rem;
+    }
+    
+    .package-main-card {
+        padding: 1.5rem;
+    }
+    
+    .package-ecosystem {
+        padding: 1rem;
+    }
+    
+    .ecosystem-grid {
+        gap: 0.6rem;
+    }
+    
+    .ecosystem-item {
+        font-size: 0.9rem;
+    }
+    
+    .package-features {
+        gap: 0.6rem;
+    }
+    
+    .feature-tag-enhanced {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .install-commands {
+        gap: 0.8rem;
+    }
+    
+    .command-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .command-item code {
+        text-align: center;
+        word-break: break-all;
+    }
+    
+    .package-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .package-link {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .package-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .package-content h4 {
+        font-size: 1.3rem;
+    }
+    
+    .ecosystem-item {
+        font-size: 0.85rem;
+    }
+    
+    .feature-tag-enhanced {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
 /* Scroll Navigation - Fixed */
 .scroll-navigation {
     display: flex;

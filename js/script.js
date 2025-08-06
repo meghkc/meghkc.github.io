@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             initializeMetricsCounters();
         }, 1000);
         
+        // Initialize package showcase copy functionality
+        initializePackageShowcase();
+        
     } else if (document.body.classList.contains('skills-awards-page')) {
         initializeSkillsAwardsTabs();
         
@@ -928,5 +931,54 @@ function initializeConferenceMap() {
             .on('mouseover', function(e) {
                 this.openPopup();
             });
+    });
+}
+
+// Package showcase copy functionality
+function initializePackageShowcase() {
+    console.log('Initializing package showcase...');
+    
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const command = this.getAttribute('data-command');
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(command).then(() => {
+                // Visual feedback
+                const originalText = this.textContent;
+                this.textContent = '✓';
+                this.classList.add('copied');
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.classList.remove('copied');
+                }, 2000);
+                
+                console.log('Copied to clipboard:', command);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = command;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Visual feedback
+                const originalText = this.textContent;
+                this.textContent = '✓';
+                this.classList.add('copied');
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.classList.remove('copied');
+                }, 2000);
+            });
+        });
     });
 }
