@@ -79,74 +79,17 @@ body.contact-page {
 
 header {
     text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-    border-bottom: 2px solid #00d4ff;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #00d4ff, #00ff88, #ff0080, #00d4ff, transparent);
-    animation: headerNeonFlow 4s ease-in-out infinite;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.05), transparent);
-    border-radius: 50%;
-    animation: headerPulse 6s ease-in-out infinite;
-}
-
-@keyframes headerNeonFlow {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
-}
-
-@keyframes headerPulse {
-    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
-    50% { transform: translate(-20px, 20px) scale(1.3); opacity: 0.5; }
+    padding: 20px;
+    background: linear-gradient(135deg, #003d7a, #0066cc, #004499);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 2.5em;
-    color: #ffffff;
-    text-shadow: 
-        0 0 10px rgba(0, 212, 255, 0.7),
-        0 0 20px rgba(0, 212, 255, 0.5),
-        0 0 30px rgba(0, 212, 255, 0.3);
+    margin: 0 0 10px 0;
+    color: white !important;
     font-weight: bold;
-    margin-bottom: 0.5rem;
-    position: relative;
-    z-index: 2;
-    animation: titleGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes titleGlow {
-    from { 
-        text-shadow: 
-            0 0 10px rgba(0, 212, 255, 0.7),
-            0 0 20px rgba(0, 212, 255, 0.5),
-            0 0 30px rgba(0, 212, 255, 0.3);
-    }
-    to { 
-        text-shadow: 
-            0 0 15px rgba(0, 255, 136, 0.8),
-            0 0 25px rgba(0, 255, 136, 0.6),
-            0 0 35px rgba(0, 255, 136, 0.4);
-    }
 }
 
 nav {
@@ -155,57 +98,207 @@ nav {
     z-index: 2;
 }
 
+/* Animated Titles Section */
+.animated-titles {
+    margin: 10px 0 15px 0;
+    font-size: 1.1rem;
+    color: #e0f0ff !important;
+    font-weight: 400;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    pointer-events: none; /* Prevent interfering with navigation */
+}
+
+.title-text {
+    opacity: 0;
+    animation: glowFadeInUp 0.8s ease forwards;
+    color: #ffffff !important;
+    text-shadow: 
+        0 0 8px rgba(255, 255, 255, 1),
+        0 0 16px rgba(255, 255, 255, 0.8),
+        0 0 24px rgba(255, 255, 255, 0.6),
+        0 0 32px rgba(255, 255, 255, 0.4),
+        0 0 48px rgba(255, 255, 255, 0.2);
+}
+
+.title-text:nth-child(1) { 
+    animation-delay: 0.2s; 
+    color: #ffff99 !important;
+    text-shadow: 
+        0 0 8px rgba(255, 255, 153, 1),
+        0 0 16px rgba(255, 255, 153, 0.8),
+        0 0 24px rgba(255, 255, 102, 0.6),
+        0 0 32px rgba(255, 255, 51, 0.4),
+        0 0 48px rgba(255, 255, 0, 0.2);
+    animation: glowFadeInUp 0.8s ease forwards, glowPulse1 2s ease-in-out infinite alternate 1s;
+}
+.title-text:nth-child(3) { 
+    animation-delay: 0.6s; 
+    color: #ffd700 !important;
+    text-shadow: 
+        0 0 8px rgba(255, 215, 0, 1),
+        0 0 16px rgba(255, 215, 0, 0.8),
+        0 0 24px rgba(255, 193, 7, 0.6),
+        0 0 32px rgba(255, 165, 0, 0.4),
+        0 0 48px rgba(255, 140, 0, 0.2);
+    animation: glowFadeInUp 0.8s ease forwards, glowPulse2 2s ease-in-out infinite alternate 1.4s;
+}
+.title-text:nth-child(5) { 
+    animation-delay: 1.0s; 
+    color: #00ffff !important;
+    text-shadow: 
+        0 0 8px rgba(0, 255, 255, 1),
+        0 0 16px rgba(0, 255, 255, 0.8),
+        0 0 24px rgba(0, 255, 255, 0.6),
+        0 0 32px rgba(0, 235, 235, 0.4),
+        0 0 48px rgba(0, 200, 200, 0.2);
+    animation: glowFadeInUp 0.8s ease forwards, glowPulse3 2s ease-in-out infinite alternate 1.8s;
+}
+
+.title-separator {
+    opacity: 0;
+    animation: glowFadeIn 0.5s ease forwards;
+    color: #ffffff !important;
+    font-weight: 500;
+    pointer-events: none;
+    text-shadow: 
+        0 0 6px rgba(255, 255, 255, 1),
+        0 0 12px rgba(255, 255, 255, 0.8),
+        0 0 18px rgba(255, 255, 255, 0.6),
+        0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+.title-separator:nth-child(2) { animation-delay: 0.4s; }
+.title-separator:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes glowFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        text-shadow: none;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 
+            0 0 8px rgba(255, 255, 255, 1),
+            0 0 16px rgba(255, 255, 255, 0.8),
+            0 0 24px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes glowFadeIn {
+    from { 
+        opacity: 0; 
+        text-shadow: none;
+    }
+    to { 
+        opacity: 1; 
+        text-shadow: 
+            0 0 6px rgba(255, 255, 255, 1),
+            0 0 12px rgba(255, 255, 255, 0.8),
+            0 0 18px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes glowPulse1 {
+    from {
+        opacity: 1;
+        text-shadow: 
+            0 0 8px rgba(255, 255, 153, 1),
+            0 0 16px rgba(255, 255, 153, 0.8),
+            0 0 24px rgba(255, 255, 102, 0.6),
+            0 0 32px rgba(255, 255, 51, 0.4),
+            0 0 48px rgba(255, 255, 0, 0.2);
+    }
+    to {
+        opacity: 1;
+        text-shadow: 
+            0 0 12px rgba(255, 255, 153, 1),
+            0 0 24px rgba(255, 255, 153, 0.9),
+            0 0 36px rgba(255, 255, 102, 0.7),
+            0 0 48px rgba(255, 255, 51, 0.5),
+            0 0 64px rgba(255, 255, 0, 0.3);
+    }
+}
+
+@keyframes glowPulse2 {
+    from {
+        opacity: 1;
+        text-shadow: 
+            0 0 8px rgba(255, 215, 0, 1),
+            0 0 16px rgba(255, 215, 0, 0.8),
+            0 0 24px rgba(255, 193, 7, 0.6),
+            0 0 32px rgba(255, 165, 0, 0.4),
+            0 0 48px rgba(255, 140, 0, 0.2);
+    }
+    to {
+        opacity: 1;
+        text-shadow: 
+            0 0 12px rgba(255, 215, 0, 1),
+            0 0 24px rgba(255, 215, 0, 0.9),
+            0 0 36px rgba(255, 193, 7, 0.7),
+            0 0 48px rgba(255, 165, 0, 0.5),
+            0 0 64px rgba(255, 140, 0, 0.3);
+    }
+}
+
+@keyframes glowPulse3 {
+    from {
+        opacity: 1;
+        text-shadow: 
+            0 0 8px rgba(0, 255, 255, 1),
+            0 0 16px rgba(0, 255, 255, 0.8),
+            0 0 24px rgba(0, 255, 255, 0.6),
+            0 0 32px rgba(0, 235, 235, 0.4),
+            0 0 48px rgba(0, 200, 200, 0.2);
+    }
+    to {
+        opacity: 1;
+        text-shadow: 
+            0 0 12px rgba(0, 255, 255, 1),
+            0 0 24px rgba(0, 255, 255, 0.9),
+            0 0 36px rgba(0, 255, 255, 0.7),
+            0 0 48px rgba(0, 235, 235, 0.5),
+            0 0 64px rgba(0, 200, 200, 0.3);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 nav a {
     margin: 0 1rem;
     text-decoration: none;
-    color: #b0e0ff;
+    color: white !important;
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border-radius: 6px;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    position: relative;
-    background: rgba(0, 212, 255, 0.1);
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-nav a:hover::before {
-    left: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 nav a:hover, nav a[aria-current="page"] {
-    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    background: rgba(0, 212, 255, 0.2);
-    border-color: #00d4ff;
-    transform: translateY(-2px);
-    box-shadow: 
-        0 4px 15px rgba(0, 212, 255, 0.4),
-        0 0 20px rgba(0, 212, 255, 0.3);
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
-}
-
-nav a[aria-current="page"] {
-    background: rgba(0, 255, 136, 0.2);
-    border-color: #00ff88;
-    color: #ffffff;
-    box-shadow: 
-        0 4px 15px rgba(0, 255, 136, 0.4),
-        0 0 20px rgba(0, 255, 136, 0.3);
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
 
 /* Mobile Header Responsive */
@@ -217,6 +310,12 @@ nav a[aria-current="page"] {
     h1 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
+    }
+    
+    .animated-titles {
+        font-size: 1rem;
+        gap: 4px;
+        margin: 8px 0 12px 0;
     }
     
     nav {
@@ -244,6 +343,17 @@ nav a[aria-current="page"] {
     
     h1 {
         font-size: 1.8rem;
+    }
+    
+    .animated-titles {
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 2px;
+        margin: 6px 0 10px 0;
+    }
+    
+    .title-separator {
+        display: none;
     }
     
     nav a {
@@ -512,20 +622,26 @@ footer p::before {
 
 .about-tabs a {
     margin: 0 15px;
-    padding: 5px 10px;
+    padding: 8px 16px;
     text-decoration: none;
-    color: #0066cc;
+    color: #0066cc !important;
     font-weight: bold;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s;
+    background: rgba(0, 102, 204, 0.1);
+    border-radius: 4px;
 }
 
 .about-tabs a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background: rgba(0, 102, 204, 0.2);
+    color: #004499 !important;
 }
 
 .about-tabs a.active {
     border-bottom: 2px solid #0066cc;
+    background: rgba(0, 102, 204, 0.15);
+    color: #004499 !important;
 }
 
 .tab-content {
@@ -551,20 +667,27 @@ footer p::before {
 
 .nested-tabs a {
     margin: 0 10px;
-    padding: 5px 8px;
+    padding: 8px 12px;
     text-decoration: none;
-    color: #0066cc;
+    color: #0066cc !important;
     font-weight: normal;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
+    transition: all 0.3s;
+    background: rgba(0, 102, 204, 0.08);
+    border-radius: 4px;
 }
 
 .nested-tabs a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background: rgba(0, 102, 204, 0.15);
+    color: #004499 !important;
 }
 
 .nested-tabs a.active {
     border-bottom: 2px solid #0066cc;
+    background: rgba(0, 102, 204, 0.12);
+    color: #004499 !important;
+    font-weight: 500;
 }
 
 .nested-tab-content {
@@ -1023,7 +1146,7 @@ button:hover {
     nav a {
         padding: 8px 12px;
         margin: 2px;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 20px;
         font-size: 0.9rem;
         min-width: auto;
@@ -1032,7 +1155,7 @@ button:hover {
     }
     
     nav a:hover, nav a[aria-current="page"] {
-        background: #0066cc;
+        background: rgba(255, 255, 255, 0.3);
         color: white;
         text-decoration: none;
     }
@@ -1081,7 +1204,10 @@ button:hover {
     .about-tabs a {
         margin: 5px 0;
         width: 100%;
+        max-width: 300px;
         text-align: center;
+        color: #0066cc !important;
+        background: rgba(0, 102, 204, 0.1);
     }
     .nested-tabs {
         flex-direction: column;
@@ -1090,8 +1216,12 @@ button:hover {
     .nested-tabs a {
         margin: 5px 0;
         width: 100%;
+        max-width: 250px;
         text-align: center;
+        color: #0066cc !important;
+        background: rgba(0, 102, 204, 0.08);
     }
+    
     .gallery {
         grid-template-columns: 1fr; /* Single column on small screens */
     }
@@ -1140,7 +1270,8 @@ header {
     flex-wrap: wrap;
     gap: 8px;
     position: relative;
-    z-index: 2;
+    z-index: 1; /* Lower z-index than navigation */
+    pointer-events: none; /* Prevent interfering with navigation clicks */
 }
 
 .title-text {
@@ -1149,6 +1280,7 @@ header {
     position: relative;
     text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
     color: #e0f7ff;
+    pointer-events: none; /* Prevent interfering with navigation */
 }
 
 .title-text:nth-child(1) { 
@@ -1173,6 +1305,7 @@ header {
     color: #7dd3fc;
     font-weight: 300;
     text-shadow: 0 0 5px rgba(125, 211, 252, 0.8);
+    pointer-events: none; /* Prevent interfering with navigation */
 }
 
 .title-separator:nth-child(2) { animation-delay: 0.4s; }
@@ -1476,6 +1609,16 @@ header {
         padding: 12px 8px;
         min-height: 44px;
         font-size: 0.9rem;
+        color: #0066cc !important;
+        background: rgba(0, 102, 204, 0.1);
+    }
+    
+    .nested-tabs a {
+        padding: 10px 6px;
+        min-height: 40px;
+        font-size: 0.85rem;
+        color: #0066cc !important;
+        background: rgba(0, 102, 204, 0.08);
     }
     
     /* Better spacing for mobile */
@@ -2922,11 +3065,11 @@ header {
 .tab-link {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #f8f9fa;
-    color: #666;
+    background: rgba(0, 102, 204, 0.1);
+    color: #0066cc !important;
     text-decoration: none;
     border-radius: 8px 8px 0 0;
-    border: 2px solid #e9ecef;
+    border: 2px solid rgba(0, 102, 204, 0.3);
     border-bottom: none;
     margin: 0 0.25rem;
     transition: all 0.3s ease;
@@ -2936,15 +3079,15 @@ header {
 
 .about-tabs .tab-link:hover,
 .tab-link:hover {
-    background: #e9ecef;
-    color: #0066cc;
+    background: rgba(0, 102, 204, 0.2);
+    color: #004499 !important;
     transform: translateY(-2px);
 }
 
 .about-tabs .tab-link.active,
 .tab-link.active {
     background: white;
-    color: #0066cc;
+    color: #004499 !important;
     border-color: #0066cc;
     font-weight: 600;
     z-index: 1;
