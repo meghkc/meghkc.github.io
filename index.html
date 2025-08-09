@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Megh KC - Ph.D. candidate in Civil Engineering specializing in transportation systems and smart mobility.">
     <title>Home - Megh KC</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <!-- Preload hero background and key profile image for faster LCP -->
+    <link rel="preload" as="image" href="assets/background_opt_q60.webp" imagesrcset="assets/background_opt_q60.webp" imagesizes="100vw">
+    <link rel="preload" as="image" href="assets/profile_opt_q80.webp">
     <link rel="stylesheet" href="css/style.css"> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" defer></script> 
 </head>
 <body class="home-page"> 
     <header>
-        <h1>Megh Bahadur KC</h1>
+    <div class="site-logo" aria-label="Personal Logo">MKC</div>
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">🌙</button>
+        <h1>Megh KC</h1>
         <div class="animated-titles">
             <span class="title-text">Transportation Engineer</span>
             <span class="title-separator">|</span>
@@ -47,13 +53,13 @@
             <!-- Enhanced Profile Slideshow - Fixed Caption -->
             <div class="profile-slideshow">
                 <!-- <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" class="slide-img" data-caption="Appointment to the TRB Committee on Transportation and Sustainability, 2025"> -->
-                <img src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" class="slide-img" data-caption="Exploring hydrogen fuel cell bus technology">
-                <img src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" class="slide-img" data-caption="Wireless charging electric bus demonstration @ ASPIRE USU">
-                <img src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" class="slide-img" data-caption="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University">
-                <img src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" class="slide-img" data-caption="Invited research presentation at UB ITE seminar, 2025">
-                <img src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" class="slide-img" data-caption="Field study of a hairpin bend in USA">
-                <img src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" class="slide-img" data-caption="Research poster on mode choice behavior for people with disabilities at TRB 2024">
-                <img src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" class="slide-img" data-caption="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience">
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Hydrogen fuel cell Bus_opt_q85_480w.webp 480w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85_768w.webp 768w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85.webp 1000w"><img fetchpriority="high" loading="eager" src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" class="slide-img" width="1000" height="750" data-caption="Exploring hydrogen fuel cell bus technology"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Wireless charging EB_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging EB_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging EB_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" class="slide-img" width="1000" height="750" data-caption="Wireless charging electric bus demonstration @ ASPIRE USU"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Wireless charging test track prototype_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging test track prototype_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging test track prototype_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" class="slide-img" width="1000" height="750" data-caption="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/UB ITE presentation _opt_q85_480w.webp 480w, assets/project gallery/UB ITE presentation _opt_q85_768w.webp 768w, assets/project gallery/UB ITE presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" class="slide-img" width="1000" height="750" data-caption="Invited research presentation at UB ITE seminar, 2025"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Hairpin bend_opt_q60_480w.webp 480w, assets/project gallery/Hairpin bend_opt_q60_768w.webp 768w, assets/project gallery/Hairpin bend_opt_q60.webp 1000w"><img loading="lazy" src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" class="slide-img" width="1000" height="750" data-caption="Field study of a hairpin bend in USA"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Mode choice poster_opt_q85_480w.webp 480w, assets/project gallery/Mode choice poster_opt_q85_768w.webp 768w, assets/project gallery/Mode choice poster_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" class="slide-img" width="1000" height="750" data-caption="Research poster on mode choice behavior for people with disabilities at TRB 2024"></picture>
+                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Presentation recognition certificate _opt_q85_480w.webp 480w, assets/project gallery/Presentation recognition certificate _opt_q85_768w.webp 768w, assets/project gallery/Presentation recognition certificate _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" class="slide-img" width="1000" height="750" data-caption="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience"></picture>
                 
                 <!-- Navigation Arrows -->
                 <button class="slideshow-nav-left" aria-label="Previous Image">‹</button>
@@ -78,8 +84,11 @@
             </div>
         </section>
         
-        <section>
-            <h2>Highlights</h2>
+        <section id="highlights-section" data-collapsible>
+            <h2 class="section-heading reveal-init">Highlights <span class="accent-badge">Featured</span>
+                <button class="collapsible-toggle" aria-expanded="true" aria-controls="highlights-content" id="toggle-highlights" title="Collapse or expand Highlights">▾</button>
+            </h2>
+            <div id="highlights-content" class="collapsible-content" role="region" aria-labelledby="toggle-highlights">
             
             <!-- Python Package Showcase Section -->
             <div class="package-showcase-section">
@@ -350,22 +359,22 @@
                         <button class="prev" aria-label="Previous Image">&#10094;</button>
                         <div class="slide">
                             <!-- <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" data-description="Appointment to the TRB Committee on Transportation and Sustainability, 2025."> -->
-                            <img src="assets/project gallery/First TRB 2022.JPG" alt="First TRB 2022" data-description="My first presentation at TRB 2022.">
-                            <img src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" data-description="Invited research Presentation at UB ITE seminar, 2025.">
-                            <img src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" data-description="Field study of a hairpin bend in USA.">
-                            <img src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" data-description="Research Poster on mode choice behavior for people with disabilities at TRB 2024.">
-                            <img src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" data-description="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience.">
-                            <img src="assets/project gallery/Research getting attention .JPG" alt="Research getting attention" data-description="Metaheuristic alrogithmic model research for School Bus Electrification getting attention.">
-                            <img src="assets/project gallery/TRB partial charging poster presentation .JPG" alt="TRB partial charging poster presentation" data-description="Poster on Bus electrification through MIP mathematical model considering partial charging at TRB 2024.">
-                            <img src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" data-description="Exploring hydrogen fuel cell bus technology.">
-                            <img src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" data-description="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University.">
-                            <img src="assets/project gallery/LEC peer review.JPG" alt="LEC peer review recognition" data-description="Recognition for LEC peer review.">
-                            <img src="assets/project gallery/Nepalese community at TRB.JPG" alt="Nepalese community at TRB" data-description="Nepalese  transportation communities gathering at TRB 2025.">
-                            <img src="assets/project gallery/TRB podium presentation.JPG" alt="TRB podium presentation" data-description="Podium presentation on Mode Choice Modeling for people with disabilities at TRB 2024.">
-                            <img src="assets/project gallery/TRB presentation recognition.JPG" alt="TRB presentation recognition" data-description="Recognition for TRB presentation at 103rd TRB Annual Meeting.">
-                            <img src="assets/project gallery/UB Group photo.JPG" alt="UB Group photo" data-description="Group photo after University at Buffalo reception & research Showcases during TRB annual meeting, 2025.">
-                            <img src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" data-description="Wireless charging electric bus demonstration @ ASPIRE USU.">
-                            <img src="assets/project gallery/Soten peer review.JPG" alt="Soten peer review" data-description="Peer review recognition from JoTSE.">
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/First TRB 2022_opt_q85_480w.webp 480w, assets/project gallery/First TRB 2022_opt_q85_768w.webp 768w, assets/project gallery/First TRB 2022_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/First TRB 2022.JPG" alt="First TRB 2022" width="1000" height="1044" data-description="My first presentation at TRB 2022."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/UB ITE presentation _opt_q85_480w.webp 480w, assets/project gallery/UB ITE presentation _opt_q85_768w.webp 768w, assets/project gallery/UB ITE presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" width="1000" height="750" data-description="Invited research Presentation at UB ITE seminar, 2025."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Hairpin bend_opt_q60_480w.webp 480w, assets/project gallery/Hairpin bend_opt_q60_768w.webp 768w, assets/project gallery/Hairpin bend_opt_q60.webp 1000w"><img loading="lazy" src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" width="1000" height="750" data-description="Field study of a hairpin bend in USA."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Mode choice poster_opt_q85_480w.webp 480w, assets/project gallery/Mode choice poster_opt_q85_768w.webp 768w, assets/project gallery/Mode choice poster_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" width="1000" height="750" data-description="Research Poster on mode choice behavior for people with disabilities at TRB 2024."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Presentation recognition certificate _opt_q85_480w.webp 480w, assets/project gallery/Presentation recognition certificate _opt_q85_768w.webp 768w, assets/project gallery/Presentation recognition certificate _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" width="1000" height="750" data-description="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Research getting attention _opt_q85_480w.webp 480w, assets/project gallery/Research getting attention _opt_q85_768w.webp 768w, assets/project gallery/Research getting attention _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Research getting attention .JPG" alt="Research getting attention" width="1000" height="750" data-description="Metaheuristic alrogithmic model research for School Bus Electrification getting attention."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB partial charging poster presentation _opt_q85_480w.webp 480w, assets/project gallery/TRB partial charging poster presentation _opt_q85_768w.webp 768w, assets/project gallery/TRB partial charging poster presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB partial charging poster presentation .JPG" alt="TRB partial charging poster presentation" width="1000" height="750" data-description="Poster on Bus electrification through MIP mathematical model considering partial charging at TRB 2024."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Hydrogen fuel cell Bus_opt_q85_480w.webp 480w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85_768w.webp 768w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" width="1000" height="750" data-description="Exploring hydrogen fuel cell bus technology."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Wireless charging test track prototype_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging test track prototype_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging test track prototype_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" width="1000" height="750" data-description="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/LEC peer review_opt_q85_480w.webp 480w, assets/project gallery/LEC peer review_opt_q85_768w.webp 768w, assets/project gallery/LEC peer review_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/LEC peer review.JPG" alt="LEC peer review recognition" width="1000" height="750" data-description="Recognition for LEC peer review."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Nepalese community at TRB_opt_q80_480w.webp 480w, assets/project gallery/Nepalese community at TRB_opt_q80_768w.webp 768w, assets/project gallery/Nepalese community at TRB_opt_q80.webp 1000w"><img loading="lazy" src="assets/project gallery/Nepalese community at TRB.JPG" alt="Nepalese community at TRB" width="1000" height="750" data-description="Nepalese  transportation communities gathering at TRB 2025."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB podium presentation_opt_q85_480w.webp 480w, assets/project gallery/TRB podium presentation_opt_q85_768w.webp 768w, assets/project gallery/TRB podium presentation_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB podium presentation.JPG" alt="TRB podium presentation" width="1000" height="750" data-description="Podium presentation on Mode Choice Modeling for people with disabilities at TRB 2024."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB presentation recognition_opt_q75_480w.webp 480w, assets/project gallery/TRB presentation recognition_opt_q75_768w.webp 768w, assets/project gallery/TRB presentation recognition_opt_q75.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB presentation recognition.JPG" alt="TRB presentation recognition" width="1000" height="750" data-description="Recognition for TRB presentation at 103rd TRB Annual Meeting."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/UB Group photo_opt_q85_480w.webp 480w, assets/project gallery/UB Group photo_opt_q85_768w.webp 768w, assets/project gallery/UB Group photo_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB Group photo.JPG" alt="UB Group photo" width="1000" height="750" data-description="Group photo after University at Buffalo reception & research Showcases during TRB annual meeting, 2025."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Wireless charging EB_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging EB_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging EB_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" width="1000" height="750" data-description="Wireless charging electric bus demonstration @ ASPIRE USU."></picture>
+                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Soten peer review_opt_q85_480w.webp 480w, assets/project gallery/Soten peer review_opt_q85_768w.webp 768w, assets/project gallery/Soten peer review_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Soten peer review.JPG" alt="Soten peer review" width="1000" height="750" data-description="Peer review recognition from JoTSE."></picture>
                         </div>
                         <button class="next" aria-label="Next Image">&#10095;</button>
                         <p class="slide-description">My first presentation at TRB 2022.</p>
@@ -375,8 +384,12 @@
         </section>
 
         <!-- Research Impact Section -->
-        <section class="research-impact-section">
-            <h2>Research Impact</h2>
+        <section class="research-impact-section" id="research-impact" data-collapsible>
+            <h2 class="section-heading reveal-init">Research Impact <span class="accent-badge">Impact</span>
+                <button class="collapsible-toggle" aria-expanded="true" aria-controls="research-impact-content" id="toggle-research-impact" title="Collapse or expand Research Impact">▾</button>
+                <button class="chart-refresh-btn" type="button" hidden aria-label="Refresh charts" title="Refresh charts">↻</button>
+            </h2>
+            <div id="research-impact-content" class="collapsible-content" role="region" aria-labelledby="toggle-research-impact">
             
             <div class="metrics-grid">
                 <div class="metric-card highlight">
@@ -405,11 +418,13 @@
                 <div class="charts-grid">
                     <div class="chart-container">
                         <h4>Citations Growth</h4>
-                        <canvas id="citationsChart"></canvas>
+                        <p id="citationsChartDesc" class="visually-hidden">Line chart showing cumulative citation counts by year.</p>
+                        <canvas id="citationsChart" aria-describedby="citationsChartDesc"></canvas>
                     </div>
                     <div class="chart-container">
                         <h4>Publications Timeline</h4>
-                        <canvas id="publicationsChart"></canvas>
+                        <p id="publicationsChartDesc" class="visually-hidden">Bar chart showing cumulative total publications by year.</p>
+                        <canvas id="publicationsChart" aria-describedby="publicationsChartDesc"></canvas>
                     </div>
                 </div>
             </div>
@@ -431,20 +446,24 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Live region for announcing metric completion -->
+            <div id="metrics-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+            </div>
         </section>
     </main>
     <footer>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/megh-kc-2015/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                <img src="assets/linkedin_icon.JPG" alt="LinkedIn" width="24" height="24">
+                <picture><source type="image/webp" srcset="assets/linkedin_icon.webp"><img loading="lazy" src="assets/linkedin_icon.JPG" alt="LinkedIn" width="24" height="24"></picture>
             </a>
 
             <a href="https://github.com/meghkc" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                <img src="assets/github_icon.JPG" alt="GitHub" width="24" height="24">
+                <picture><source type="image/webp" srcset="assets/github_icon.webp"><img loading="lazy" src="assets/github_icon.JPG" alt="GitHub" width="24" height="24"></picture>
             </a>
             
             <a href="https://www.researchgate.net/profile/Megh-KC" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate Profile">
-                <img src="assets/researchgate_icon.JPG" alt="ResearchGate" width="24" height="24">
+                <picture><source type="image/webp" srcset="assets/researchgate_icon_opt_q85.webp"><img loading="lazy" src="assets/researchgate_icon.JPG" alt="ResearchGate" width="24" height="24"></picture>
             </a>
         </div>
         
