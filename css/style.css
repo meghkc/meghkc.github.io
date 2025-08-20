@@ -1,7 +1,7 @@
 /* =============================================================
     Design System Enhancements (Brand + Typography)
-    Added: CSS variables, improved heading hierarchy, accent utilities
-    ============================================================= */
+    CSS variables, improved heading hierarchy, accent utilities
+    ============================================================= */ 
 /* Reset and base styles */ 
  :root {
      --brand-primary: #0066cc;
@@ -18,8 +18,8 @@
      --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
      /* Role colors */
      --role-color-0: #ffb300;
-     --role-color-1: #0066cc;
-     --role-color-2: #009e73;
+     --role-color-1: #e612b1;
+     --role-color-2: #05f7b6;
  }
 
 /* Optional web font import (will gracefully fall back if blocked) */
