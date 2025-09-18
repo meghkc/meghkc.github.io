@@ -1,4 +1,13 @@
+
 # Academic Website: Megh KC
+
+<!-- Badges -->
+<p align="left">
+	<a href="https://github.com/meghkc/meghkc.github.io"><img src="https://img.shields.io/github/stars/meghkc/meghkc.github.io?style=social" alt="GitHub stars"></a>
+	<a href="https://github.com/meghkc/meghkc.github.io/blob/master/LICENSE"><img src="https://img.shields.io/github/license/meghkc/meghkc.github.io" alt="License"></a>
+	<a href="https://github.com/meghkc/meghkc.github.io/commits/master"><img src="https://img.shields.io/github/last-commit/meghkc/meghkc.github.io" alt="Last commit"></a>
+	<img src="https://visitor-badge.laobi.icu/badge?page_id=meghkc.meghkc.github.io" alt="Visitor badge">
+</p>
 
 ## Overview
 This repository hosts the static academic website. The website showcases my research, publications, and professional experience in transportation electrification, optimization, and AI-driven transit solutions.
