@@ -1413,6 +1413,13 @@ button:hover {
     box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
 }
 
+/* New distinct style for Fellowship badges */
+.award-type.fellowship {
+    background: linear-gradient(135deg, #8a2be2, #6a5acd); /* Purple gradient */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(138, 43, 226, 0.3);
+}
+
 /* Enhanced Mobile Navigation */
 @media (max-width: 768px) {
     /* Existing styles */
