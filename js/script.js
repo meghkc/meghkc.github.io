@@ -789,7 +789,7 @@ function initializeResearchImpactChart() {
                     labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
                     datasets: [{
                         label: 'Citations',
-                        data: [0, 5, 12, 25, 38, 48, 56],
+                        data: [0, 5, 12, 25, 38, 48, 57],
                         borderColor: '#0066cc',
                         backgroundColor: 'rgba(0, 102, 204, 0.1)',
                         fill: true,
@@ -834,7 +834,7 @@ function initializeResearchImpactChart() {
         if (publicationsCtx) {
             const yearLabels = ['2019', '2020', '2021', '2024', '2025'];
             // Cumulative counts (replace with actual if needed)
-            const cumulative = [1, 2, 3, 4, 5];
+            const cumulative = [1, 2, 3, 4, 6];
 
             const darkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
             const axisTickColor = darkTheme ? '#d4ebf9' : '#444';
