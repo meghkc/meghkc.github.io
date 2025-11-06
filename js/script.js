@@ -814,7 +814,7 @@ function initializeResearchImpactChart() {
                     scales: {
                         y: {
                             beginAtZero: true,
-                            max: 58,
+                            max: 60,
                             ticks: { stepSize: 1, color: axisTickColor },
                             grid: { display: false },
                             border: { color: axisBorderColor }
