@@ -57,16 +57,16 @@
                 <div id="conference-panel" class="tab-panel" role="tabpanel" aria-labelledby="conference-tab">
                     <h3>Conference Presentations</h3>
                     <ul class="publication-list">
-                        <p>17. <b>KC, M. B.</b>, Song, Z., Park, K., Chamberlin, B. & Christinsen, K. (2025). Household Residential Location Choice Modeling for People with Disabilities in Utah. <i>ASCE International Conference on Transportation Development</i>, June 6-8, 2025, Arizona, USA (Accepted)</p>
-                        <p>16. <b>KC, M. B.</b>, & Song, Z. (2024). Multi-Stage, Multi-School Electric Bus Routing and Scheduling Optimization Using Metaheuristics. <i>Transportation Research Board (TRB) Annual Meeting <i>, January 5-9, 2025, Washington DC</p>
-                        <p>15. <b>KC, M. B.</b>, & Song, Z. (2024). Integrated Optimized Charging and Economic Analysis of V2G Enabled School Bus System. Transportation Research Board (TRB) Annual Meeting, January 5-9, 2025, Washington DC</p>
-                        <p>14. <b>KC, Megh</b> and Song, Ziqi (2024), " Inclusive Transport Policy: Mode Choice Behavior of People with Disabilities in Utah," 2024 ITE Mountain District Annual Meeting, Big Sky, Montana, 19-21 June 2024 (Accepted)</p>
-                        <p>13. <b>KC, Megh</b>; Song, Ziqi; Park, Keunhyun and Keith Christinsen (2024), “Inclusive Transportation System and Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah”, 6-Minute Showcase for the 2024 TRB Annual Meeting as part of the Young Member Council - Sustainability and Resilience, Washington DC (awarded as recognized presentation)</p>
-                        <p>12. <b>KC, Megh</b> and Song, Ziqi (2024), “Evolving School Transportation: A Comprehensive Approach to Bus Electrification with Dynamic Route Optimization and Partial Charging for Mixed Fleets”, Transportation Research Board (TRB) Annual Meeting, January 7-11, 2024, Washington DC </p>
-                        <p>11. <b>KC, Megh</b>; Song, Ziqi; Park, Keunhyun and Keith Christinsen (2024), “Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah”, Transportation Research Board (TRB) Annual Meeting, January 7-11, 2024, Washington DC</p>
-                        <p>10. <b>KC, Megh</b> and Song, Ziqi (2023), "School Transportation Electrification: Simultaneous Route Optimization, Timetabling, and Partial Charging for Mixed Fleet," 2023 ITE Mountain District Annual Meeting, St. George, Utah, 21-23 June 2023</p>
-                        <p>9. <b>KC, Megh</b> and Song, Ziqi (2023), "Electric School Buses: Optimal Routing and Partial Charging," USU Student Research Symposium 2023, Logan, 12 April 2023</p>
-                        <p>8. <b>KC, Megh</b> and Song, Ziqi (2023), "School Bus Electrification: Route Optimization, Timetabling, and Partial Charging," College of Engineering Research Week, USU, Logan, 4 April 2023.</p>
+                        <li>17. <b>KC, M. B.</b>, Song, Z., Park, K., Chamberlin, B. & Christinsen, K. (2025). Household Residential Location Choice Modeling for People with Disabilities in Utah. <i>ASCE International Conference on Transportation Development</i>, June 6-8, 2025, Arizona, USA (Accepted)</li>
+                        <li>16. <b>KC, M. B.</b>, & Song, Z. (2024). Multi-Stage, Multi-School Electric Bus Routing and Scheduling Optimization Using Metaheuristics. <i>Transportation Research Board (TRB) Annual Meeting <i>, January 5-9, 2025, Washington DC</li>
+                        <li>15. <b>KC, M. B.</b>, & Song, Z. (2024). Integrated Optimized Charging and Economic Analysis of V2G Enabled School Bus System. Transportation Research Board (TRB) Annual Meeting, January 5-9, 2025, Washington DC</li>
+                        <li>14. <b>KC, Megh</b> and Song, Ziqi (2024), " Inclusive Transport Policy: Mode Choice Behavior of People with Disabilities in Utah," 2024 ITE Mountain District Annual Meeting, Big Sky, Montana, 19-21 June 2024 (Accepted)</li>
+                        <li>13. <b>KC, Megh</b>; Song, Ziqi; Park, Keunhyun and Keith Christinsen (2024), “Inclusive Transportation System and Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah”, 6-Minute Showcase for the 2024 TRB Annual Meeting as part of the Young Member Council - Sustainability and Resilience, Washington DC (awarded as recognized presentation)</li>
+                        <li>12. <b>KC, Megh</b> and Song, Ziqi (2024), “Evolving School Transportation: A Comprehensive Approach to Bus Electrification with Dynamic Route Optimization and Partial Charging for Mixed Fleets”, Transportation Research Board (TRB) Annual Meeting, January 7-11, 2024, Washington DC </li>
+                        <li>11. <b>KC, Megh</b>; Song, Ziqi; Park, Keunhyun and Keith Christinsen (2024), “Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah”, Transportation Research Board (TRB) Annual Meeting, January 7-11, 2024, Washington DC</li>
+                        <li>10. <b>KC, Megh</b> and Song, Ziqi (2023), "School Transportation Electrification: Simultaneous Route Optimization, Timetabling, and Partial Charging for Mixed Fleet," 2023 ITE Mountain District Annual Meeting, St. George, Utah, 21-23 June 2023</li>
+                        <li>9. <b>KC, Megh</b> and Song, Ziqi (2023), "Electric School Buses: Optimal Routing and Partial Charging," USU Student Research Symposium 2023, Logan, 12 April 2023</li>
+                        <li>8. <b>KC, Megh</b> and Song, Ziqi (2023), "School Bus Electrification: Route Optimization, Timetabling, and Partial Charging," College of Engineering Research Week, USU, Logan, 4 April 2023.</li>
                     </ul>
                 </div>
             </div>
@@ -87,8 +87,9 @@
             </a>
         </div>
         
-        <p>© 2025 Megh KC. All rights reserved.</p>
+        <p>© <span id="year">2025</span> Megh KC. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

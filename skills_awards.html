@@ -261,9 +261,10 @@
                 <picture><source type="image/webp" srcset="assets/researchgate_icon_opt_q85.webp"><img src="assets/researchgate_icon.JPG" alt="ResearchGate" width="24" height="24" loading="lazy"></picture>
             </a>
         </div>
-        <p>© 2025 Megh KC. All rights reserved.</p>
+        <p>© <span id="year">2025</span> Megh KC. All rights reserved.</p>
     </footer>
     <script src="js/script.js" defer></script>
     <script src="js/skills-visualization.js" defer></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
