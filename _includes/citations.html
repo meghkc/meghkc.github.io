@@ -1,10 +1,11 @@
 {% assign sc = site.data.scholar %}
 {% assign yearly = 0 %}{% for r in sc.by_year %}{% assign yearly = yearly | plus: r.citations %}{% endfor %}
-<div class="cites" data-cites>
+{% assign earlier = sc.total | minus: yearly %}{% if earlier < 0 %}{% assign earlier = 0 %}{% endif %}
+<div class="cites" data-cites data-start="{{ earlier }}">
   <div class="cites-head">
     <div>
       <h3 class="cites-title">Cumulative citations</h3>
-      <p class="muted cites-src">Google Scholar, updated {{ sc.updated }}. <a href="{{ sc.profile }}" target="_blank" rel="noopener">Current profile</a>{% if yearly != sc.total %}<br>The chart sums Scholar's yearly counts ({{ yearly }}); the total of {{ sc.total }} includes citations Scholar does not assign to a year.{% endif %}</p>
+      <p class="muted cites-src">Google Scholar, updated {{ sc.updated }}. <a href="{{ sc.profile }}" target="_blank" rel="noopener">Current profile</a></p>
     </div>
     <dl class="cites-stats">
       <div><dt>Citations</dt><dd>{{ sc.total }}</dd></div>
@@ -18,7 +19,7 @@
     <table>
       <thead><tr><th scope="col">Year</th><th scope="col">Citations</th><th scope="col">Cumulative</th></tr></thead>
       <tbody>
-        {% assign run = 0 %}
+        {% assign run = earlier %}
         {% for r in sc.by_year %}{% assign run = run | plus: r.citations %}<tr><td>{{ r.year }}</td><td>{{ r.citations }}</td><td>{{ run }}</td></tr>{% endfor %}
       </tbody>
     </table>

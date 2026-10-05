@@ -92,7 +92,8 @@
     var plot = $('.cites-plot', box), tip = $('.cites-tip', box);
     var NS = 'http://www.w3.org/2000/svg';
     var H = 200, m = { t: 26, r: 22, b: 26, l: 22 }, ih = H - m.t - m.b;
-    var cum = 0;
+    // Citations from before the first charted year start the line, so it ends at Scholar's total.
+    var cum = parseInt(box.dataset.start, 10) || 0;
     rows = rows.map(function (r) { cum += r.citations; return { year: r.year, v: r.citations, c: cum }; });
     function el(tag, attrs, parent) {
       var n = document.createElementNS(NS, tag);
