@@ -102,7 +102,7 @@ The design borrows from transit signage, which is your field:
 ## Round 3 (Oct 2026)
 
 - Education dates wrap instead of overlapping the degree name.
-- Citations: Scholar figures from Oct 2026 (65 total, h-index 4, per-year 2020–2026). Shown as one cumulative line with no gridlines; hover or tab to a year for its count.
+- Citations: Scholar figures from Oct 2026 (65 total, h-index 4, per-year 2020–2026). One cumulative line with no gridlines, starting at 7 in 2020 (the 2 citations from before 2020 plus 5) and ending at 65.
 - Home hero: the USU bus photo is replaced by an animated electric bus network drawn in code (routes in the research-line colors, buses whose battery drains and refills at charging depots). It shows a still frame when the visitor prefers reduced motion and pauses when scrolled away.
 - Publications hero: the TRB podium photo is re-cropped so your head shows.
 - Experience route: each stop shows the city with state or country, and a badge with the organization's initials. Logos could not be downloaded from this environment. Drop a square logo into `assets/logos/` and add `logo: assets/logos/<file>` to that stop in `_data/experience.yml`.
