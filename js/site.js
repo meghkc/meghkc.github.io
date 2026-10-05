@@ -84,6 +84,100 @@
     lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
   }
 
+  // Citations chart: per-year bars or a cumulative line, drawn as SVG on one shared scale.
+  $$('[data-cites]').forEach(function (box) {
+    var rows;
+    try { rows = JSON.parse($('.cites-data', box).textContent); } catch (e) { return; }
+    if (!rows || !rows.length) return;
+    var plot = $('.cites-plot', box), tip = $('.cites-tip', box), seg = $('.seg', box);
+    var NS = 'http://www.w3.org/2000/svg';
+    var W, H = 220, m = { t: 24, r: 8, b: 26, l: 34 }, iw, ih = H - m.t - m.b, mode = 'year';
+    var cum = 0;
+    rows = rows.map(function (r) { cum += r.citations; return { year: r.year, v: r.citations, c: cum }; });
+    function el(tag, attrs, parent) {
+      var n = document.createElementNS(NS, tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      if (parent) parent.appendChild(n);
+      return n;
+    }
+    function niceMax(v) {
+      var mag = Math.pow(10, Math.floor(Math.log10(Math.max(v / 4, 1))));
+      var step = [1, 2, 5, 10].map(function (f) { return f * mag; }).filter(function (x) { return x * 4 >= v; })[0];
+      return { max: Math.ceil(v / step) * step, step: step };
+    }
+    function hideTip() { tip.hidden = true; plot.classList.remove('is-hovering'); $$('.on', plot).forEach(function (n) { n.classList.remove('on'); }); $$('.hover-col', plot).forEach(function (n) { n.setAttribute('opacity', 0); }); }
+    function draw(md) {
+      mode = md || mode;
+      W = Math.max(280, Math.round(plot.clientWidth)); iw = W - m.l - m.r;
+      plot.textContent = '';
+      var key = mode === 'cum' ? 'c' : 'v';
+      var sc = niceMax(Math.max.apply(null, rows.map(function (r) { return r[key]; })));
+      var y = function (v) { return m.t + ih - (v / sc.max) * ih; };
+      var band = iw / rows.length;
+      var x = function (i) { return m.l + band * i + band / 2; };
+      var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, 'aria-label': 'Citations by year' }, plot);
+      for (var t = 0; t <= sc.max; t += sc.step) {
+        el('line', { 'class': 'grid', x1: m.l, x2: W - m.r, y1: y(t), y2: y(t) }, svg);
+        el('text', { 'class': 'axis', x: m.l - 8, y: y(t) + 4, 'text-anchor': 'end' }, svg).textContent = t;
+      }
+      var cols = [];
+      rows.forEach(function (r, i) {
+        el('text', { 'class': 'axis', x: x(i), y: H - 6, 'text-anchor': 'middle' }, svg).textContent = r.year;
+        cols.push(el('rect', { 'class': 'hover-col', x: m.l + band * i, y: m.t, width: band, height: ih, opacity: 0 }, svg));
+      });
+      var marks = [];
+      if (mode === 'cum') {
+        var pts = rows.map(function (r, i) { return x(i) + ',' + y(r.c); });
+        el('path', { 'class': 'area', d: 'M' + x(0) + ',' + y(0) + 'L' + pts.join('L') + 'L' + x(rows.length - 1) + ',' + y(0) + 'Z' }, svg);
+        el('path', { 'class': 'ln', d: 'M' + pts.join('L') }, svg);
+        rows.forEach(function (r, i) { marks.push(el('circle', { 'class': 'dot', cx: x(i), cy: y(r.c), r: 4.5 }, svg)); });
+      } else {
+        var bw = Math.min(40, band * 0.62), rad = 4;
+        rows.forEach(function (r, i) {
+          var x0 = x(i) - bw / 2, y0 = y(r.v), h = y(0) - y0, rr = Math.min(rad, h);
+          var d = 'M' + x0 + ',' + y(0) + 'V' + (y0 + rr) + 'Q' + x0 + ',' + y0 + ' ' + (x0 + rr) + ',' + y0 +
+            'H' + (x0 + bw - rr) + 'Q' + (x0 + bw) + ',' + y0 + ' ' + (x0 + bw) + ',' + (y0 + rr) + 'V' + y(0) + 'Z';
+          marks.push(el('path', { 'class': 'bar', d: d }, svg));
+        });
+      }
+      var last = rows[rows.length - 1];
+      el('text', { 'class': 'val', x: x(rows.length - 1), y: y(last[key]) - 9, 'text-anchor': 'middle' }, svg).textContent = last[key];
+      rows.forEach(function (r, i) {
+        var hit = el('rect', { 'class': 'hit', x: m.l + band * i, y: 0, width: band, height: H, tabindex: 0,
+          'aria-label': r.year + ': ' + r.v + ' citations, ' + r.c + ' cumulative' }, svg);
+        function show() {
+          hideTip();
+          plot.classList.add('is-hovering'); marks[i].classList.add('on'); cols[i].setAttribute('opacity', 1);
+          var pr = plot.getBoundingClientRect(), br = box.getBoundingClientRect(), k = pr.width / W;
+          tip.innerHTML = '';
+          tip.appendChild(document.createTextNode(mode === 'cum' ? r.c + ' total by ' + r.year : r.v + ' citations in ' + r.year));
+          var sub = document.createElement('span');
+          sub.textContent = mode === 'cum' ? '+' + r.v + ' that year' : r.c + ' cumulative';
+          tip.appendChild(sub);
+          tip.style.left = (pr.left - br.left + x(i) * k) + 'px';
+          tip.style.top = (pr.top - br.top + y(r[key]) * k - 10) + 'px';
+          tip.hidden = false;
+        }
+        hit.addEventListener('mouseenter', show);
+        hit.addEventListener('focus', show);
+        hit.addEventListener('click', show);
+        hit.addEventListener('mouseleave', hideTip);
+        hit.addEventListener('blur', hideTip);
+      });
+    }
+    seg.hidden = false;
+    plot.removeAttribute('aria-hidden');
+    $$('.seg-btn', seg).forEach(function (b) {
+      b.addEventListener('click', function () {
+        $$('.seg-btn', seg).forEach(function (o) { o.setAttribute('aria-pressed', o === b); });
+        hideTip(); draw(b.dataset.mode);
+      });
+    });
+    draw('year');
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { hideTip(); draw(); }, 150); });
+  });
+
   // Contact form: submit in place when possible, fall back to a normal POST.
   var form = $('#contact-form');
   if (form && window.fetch) {
