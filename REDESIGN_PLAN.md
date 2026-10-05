@@ -88,17 +88,20 @@ The design borrows from transit signage, which is your field:
 - **Paper titles and accept/reject decisions from your TRB editor work are not published.** They are other authors' confidential submissions. The site shows only the aggregate (29 manuscripts coordinated). Consider whether the CV itself should list them.
 - Your phone number and street address from the CV are not on the site. It shows "California, USA" and both email addresses.
 
-## 4. Please confirm before I publish
+## 4. Decisions (round 2, Oct 2026)
 
-1. **CV PDF.** `assets/Megh_recent CV.pdf` is still the old version. Send an updated PDF, or tell me to export one from the .docx (with or without the editor decision list).
-2. **Conference dates that conflict in the CV:**
-   - #18 *Land Use Transition…* is listed as "(2025) … January 11–15, 2025". TRB 2025 was January 5–9; January 11–15 was TRB 2026. I show January 2026.
-   - #19 *Household Residential Location Choice…* is listed as "January 5–9, 2025", but the under-review list says TRBAM 2026. I show January 2026.
-3. **Presentations #1–7** are not in the CV or on the old site. Add them to `_data/talks.yml` if you want the complete list.
-4. **Review paper year.** The arXiv ID 2601.00838 means January 2026. The CV says 2025. I used 2026.
-5. **Dates without a month** in News (TRB 2027 acceptances, editor appointment, ITE award) are shown as the year only.
-6. **Hero headline.** I lead with "Transportation Engineer, California Department of Transportation" and put the Ph.D. second. If you are aiming at faculty jobs, swap them in `_data/profile.yml`.
-7. **Citation metrics.** Removed in favour of a Google Scholar link. I can add them back if you want them.
+- **Headline:** Ph.D. candidate first, Caltrans second.
+- **Photo:** one thick ring in the accent color.
+- **Grants and fellowships** is its own section: the NYC DOT subaward (PI, $35,000, FHWA via NYMTC/NYSDOT, awarded as the 9/11 Memorial Fellowship), the two proposal-writing contributions (NYSERDA RFP 5965 and the DOE Joint Office concept paper), and the Lad scholarship.
+- **Citations chart:** interactive per-year bars and cumulative line from `_data/scholar.yml`. This environment cannot reach Google Scholar, so the numbers are the ones your old site showed (61 citations, h-index 4, Dec 2025). Paste the current per-year counts into `_data/scholar.yml`.
+- **Thematic hero images:** the ASPIRE wireless-charging bus on the home page, the TRB podium on Publications, faded so text stays readable in both themes.
+- **CV:** new PDF from your Oct 2026 .docx at `assets/Megh_KC_CV.pdf`. The TRB editor table keeps the 29 titles and drops the decision column. The old file name `assets/Megh_recent CV.pdf` holds the same new PDF so existing links still work. The website itself shows only the count of 29.
+- **Presentations #1–7** stay out by choice.
+- Still to check: the dates of presentations #18 and #19 (shown as January 2026).
+
+## Custom domain
+
+Deploying this keeps meghkc.com. The `CNAME` file is unchanged and Jekyll copies it into the built site. GitHub Pages reads the domain from the repository settings, not from the page code. The site goes live once this branch is merged into `main`, the default branch, which Pages most likely publishes from (check Settings → Pages). The first build after the merge takes a minute or two, and HTTPS stays on.
 
 ## 5. After launch (optional)
 
@@ -117,6 +120,8 @@ The design borrows from transit signage, which is your field:
 | A job | `_data/experience.yml` |
 | Bio, links, emails, CV path | `_data/profile.yml` |
 | Research lines | `_data/themes.yml`, `_data/projects.yml` |
+| Citation counts | `_data/scholar.yml` |
+| Grants, proposals, scholarships | `_data/grants.yml` |
 | Code, service, awards, teaching, tools, photos | the matching file in `_data/` |
 
 Preview locally: `gem install jekyll && jekyll serve`, then open http://localhost:4000.

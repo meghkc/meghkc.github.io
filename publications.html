@@ -3,13 +3,18 @@ layout: default
 title: Publications
 nav: publications
 description: Journal articles, preprints, papers under review and conference presentations by Megh Bahadur KC.
+hero_image: "assets/project%20gallery/TRB%20podium%20presentation_opt_q85.webp"
 ---
 {% assign pubs = site.data.publications %}
+<div class="hero-band">
+<div class="hero-bg" style="background-image: url('{{ page.hero_image }}')" aria-hidden="true"></div>
 <section class="wrap page-head">
   <p class="eyebrow">Publications</p>
   <h1>Papers and talks</h1>
   <p class="lede">{{ pubs.size }} papers and {{ site.data.talks.size }} peer-reviewed conference presentations. Filter by research line or status. A full list with citation counts is on <a href="{{ site.data.profile.links[0].url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
 </section>
+</div>
+<section class="wrap pub-cites">{% include citations.html %}</section>
 
 <section class="wrap filters" aria-label="Filter publications">
   <div class="filter-row" role="group" aria-label="Research line">
