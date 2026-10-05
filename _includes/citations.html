@@ -1,0 +1,31 @@
+{% assign sc = site.data.scholar %}
+{% assign total = 0 %}{% for r in sc.by_year %}{% assign total = total | plus: r.citations %}{% endfor %}
+<div class="cites" data-cites>
+  <div class="cites-head">
+    <div>
+      <h3 class="cites-title">Citations per year</h3>
+      <p class="muted cites-src">Google Scholar, updated {{ sc.updated }}. <a href="{{ sc.profile }}" target="_blank" rel="noopener">Current profile</a></p>
+    </div>
+    <dl class="cites-stats">
+      <div><dt>Citations</dt><dd>{{ total }}</dd></div>
+      <div><dt>h-index</dt><dd>{{ sc.h_index }}</dd></div>
+    </dl>
+  </div>
+  <div class="seg" role="group" aria-label="Chart view" hidden>
+    <button type="button" class="seg-btn" data-mode="year" aria-pressed="true">Per year</button>
+    <button type="button" class="seg-btn" data-mode="cum" aria-pressed="false">Cumulative</button>
+  </div>
+  <div class="cites-plot" aria-hidden="true"></div>
+  <div class="cites-tip" role="status" hidden></div>
+  <details class="cites-table">
+    <summary>Show as table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">Citations</th><th scope="col">Cumulative</th></tr></thead>
+      <tbody>
+        {% assign run = 0 %}
+        {% for r in sc.by_year %}{% assign run = run | plus: r.citations %}<tr><td>{{ r.year }}</td><td>{{ r.citations }}</td><td>{{ run }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </details>
+  <script type="application/json" class="cites-data">{{ sc.by_year | jsonify }}</script>
+</div>

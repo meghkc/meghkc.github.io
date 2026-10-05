@@ -7,6 +7,8 @@ nav: home
 {% assign published = pubs | where: "status", "published" %}
 {% assign preprints = pubs | where: "status", "preprint" %}
 {% assign reviewing = pubs | where: "status", "review" %}
+<div class="hero-band">
+<div class="hero-bg" style="background-image: url('assets/project%20gallery/Wireless%20charging%20EB_opt_q85.webp')" aria-hidden="true"></div>
 <section class="hero wrap">
   <div class="hero-text">
     <p class="eyebrow">{{ p.headline }}</p>
@@ -29,6 +31,7 @@ nav: home
     <div><dt>TRB manuscripts coordinated as editor</dt><dd>{{ site.data.service.editor.manuscripts }}</dd></div>
   </dl>
 </section>
+</div>
 
 <section class="band" id="news" aria-labelledby="news-h">
   <div class="wrap two-col">
@@ -85,20 +88,60 @@ nav: home
   </div>
 </section>
 
-<section class="band" id="selected" aria-labelledby="sel-h">
+
+<section class="band" id="grants" aria-labelledby="grants-h">
   <div class="wrap">
+    <div class="sec-head">
+      <h2 id="grants-h" class="sec-h">Grants and fellowships</h2>
+      <p class="sec-note">Funding I lead as PI, and proposals I helped write.</p>
+    </div>
+    {% assign gr = site.data.grants %}
+    <div class="grants">
+      {% for g in gr.funded %}
+      <article class="grant-feature line-{{ g.line }}">
+        <p class="grant-role">{% include line-badge.html code=g.line %} {{ g.role }} · {{ g.date }}</p>
+        <p class="grant-amt">{{ g.amount }}</p>
+        <h3>{{ g.title }}</h3>
+        <dl class="grant-meta">
+          <div><dt>Sponsor</dt><dd>{{ g.sponsor }}</dd></div>
+          <div><dt>Program</dt><dd>{{ g.program }}</dd></div>
+          <div><dt>Host agency</dt><dd>{{ g.host }}</dd></div>
+        </dl>
+        <p class="muted">{{ g.note }} {% if g.url %}<a href="{{ g.url }}" target="_blank" rel="noopener">Announcement</a>{% endif %}</p>
+      </article>
+      {% endfor %}
+      <div class="grant-side">
+        <h3 class="mini-h">Proposal writing</h3>
+        <ul class="plain grant-list">
+          {% for g in gr.proposals %}<li>{% include line-badge.html code=g.line %}<div><b>{{ g.title }}</b> <span class="amt">{{ g.amount }}</span><br><span class="muted">{{ g.sponsor }}{% if g.years %}, {{ g.years }}{% endif %}. {{ g.contribution }}.</span></div></li>{% endfor %}
+        </ul>
+        <h3 class="mini-h">Scholarships</h3>
+        <ul class="plain">
+          {% for g in gr.scholarships %}<li><b>{{ g.title }}</b> <span class="amt">{{ g.amount }}</span> <span class="date">{{ g.date }}</span><br><span class="muted">{{ g.sponsor }}</span></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="selected" aria-labelledby="sel-h">
+  <div>
     <div class="sec-head">
       <h2 id="sel-h" class="sec-h">Selected papers</h2>
       <a class="more" href="publications.html">All {{ pubs.size }} papers and {{ site.data.talks.size }} talks</a>
     </div>
-    <ol class="pubs">
-      {% assign sel = pubs | where: "selected", true %}
-      {% for pb in sel %}{% include pub.html p=pb %}{% endfor %}
-    </ol>
+    <div class="sel-grid">
+      <ol class="pubs">
+        {% assign sel = pubs | where: "selected", true %}
+        {% for pb in sel %}{% include pub.html p=pb %}{% endfor %}
+      </ol>
+      {% include citations.html %}
+    </div>
   </div>
 </section>
 
-<section class="wrap" id="experience" aria-labelledby="exp-h">
+<section class="band" id="experience" aria-labelledby="exp-h">
+<div class="wrap">
   <div class="sec-head">
     <h2 id="exp-h" class="sec-h">Experience</h2>
     <p class="sec-note">From highway projects in Nepal to transit research in the US. Select a stop for details.</p>
@@ -134,10 +177,11 @@ nav: home
       </dl>
     </div>
   </div>
+</div>
 </section>
 
-<section class="band" id="code" aria-labelledby="code-h">
-  <div class="wrap">
+<section class="wrap" id="code" aria-labelledby="code-h">
+  <div>
     <div class="sec-head">
       <h2 id="code-h" class="sec-h">Code and tools</h2>
       <a class="more" href="https://github.com/meghkc" target="_blank" rel="noopener">github.com/meghkc</a>
@@ -156,7 +200,8 @@ nav: home
   </div>
 </section>
 
-<section class="wrap" id="service" aria-labelledby="svc-h">
+<section class="band" id="service" aria-labelledby="svc-h">
+<div class="wrap">
   <div class="sec-head"><h2 id="svc-h" class="sec-h">Service and recognition</h2></div>
   {% assign sv = site.data.service %}
   <div class="svc">
@@ -179,9 +224,10 @@ nav: home
       </ul>
     </div>
   </div>
+</div>
 </section>
 
-<section class="band" id="gallery" aria-labelledby="gal-h">
+<section id="gallery" aria-labelledby="gal-h">
   <div class="wrap">
     <div class="sec-head"><h2 id="gal-h" class="sec-h">In the field</h2><p class="sec-note">Test tracks, posters and TRB meetings.</p></div>
   </div>
