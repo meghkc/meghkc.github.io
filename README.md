@@ -16,20 +16,25 @@ This repository hosts the static academic website. The website showcases my rese
 The website serves as a professional portfolio to:
 - Highlight my research on bus transport electrification, reinforcement learning, and freight optimization.
 - Share peer-reviewed publications and conference presentations.
-- Detail ongoing research projects, including collaborations with the National Renewable Energy Laboratory (NREL) and ASPIRE NSF ERC.
+- Detail research projects with the National Laboratory of the Rockies (formerly NREL), NYC DOT and the ASPIRE NSF ERC.
 - Provide contact information and links to academic profiles (LinkedIn, GitHub, ResearchGate).
 
-## Features
-- **Responsive Design**: Mobile-friendly layout for accessibility.
-- **Accessibility**: Includes ARIA attributes and semantic HTML for screen readers.
-- **Content**: Tailored to my CV, covering education, research, publications, and contact details.
-- **GitHub Pages**: Hosted for free with automatic updates on push.
+## How it works
+- **Jekyll on GitHub Pages.** Pages are built automatically on push; there is no separate build step.
+- **Content lives in `_data/*.yml`.** One file per CV section (publications, talks, experience, news, projects, service, awards, software). Edit the YAML, push, and every page updates.
+- **Templates:** `index.html` (home) and `publications.html` (filterable list), sharing `_layouts/default.html` and `_includes/`.
+- **Styles and scripts:** `css/site.css` and `js/site.js`, with no third-party libraries. Light and dark themes follow the system setting.
+- Old URLs (`about.html`, `research.html`, `skills_awards.html`, `contact.html`) redirect to sections of the home page.
+
+## Local preview
+```bash
+gem install jekyll
+jekyll serve   # http://localhost:4000
+```
 
 ## Contact
-For questions or collaboration inquiries, contact me at:
-- Email: [meghbaha@buffalo.edu](mailto:meghbaha@buffalo.edu)
-- Address: 212 Ketter Hall, Buffalo, NY, 14260
-- Profiles: [LinkedIn](https://www.linkedin.com/in/megh-kc-2015/) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-KC)
+- Email: kc.megh2048@gmail.com, meghbaha@buffalo.edu
+- Profiles: [Google Scholar](https://scholar.google.com/citations?user=-qMDe58AAAAJ) | [LinkedIn](https://www.linkedin.com/in/megh-kc-2015/) | [GitHub](https://github.com/meghkc) | [ResearchGate](https://www.researchgate.net/profile/Megh-Kc)
 
 ## License
 The website's source code is distributed under the MIT License. Text and images

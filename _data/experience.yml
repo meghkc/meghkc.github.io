@@ -1,0 +1,74 @@
+# Career "stops", newest first. place is the short station name on the route map.
+- role: Transportation Engineer
+  org: California Department of Transportation (Caltrans)
+  place: Caltrans
+  start: 2026-07
+  end: present
+  kind: industry
+  points:
+    - Sub-regional travel demand models and forecasts supporting traffic operations analysis and environmental studies of project alternatives.
+- role: Graduate Research Assistant
+  org: University at Buffalo, SUNY
+  place: Buffalo
+  start: 2025-01
+  end: present
+  kind: research
+  points:
+    - Dissertation on optimization, metaheuristics and multi-agent deep reinforcement learning for multi-line electric bus scheduling and charging under uncertainty.
+    - Published the freight-analytics-dashboard package on PyPI; built data pipelines on HPC for large computational models.
+    - "Drafted proposal sections for NYSERDA RFP 5965 (Electric School Bus Transition Support, $1M) and a DOE Joint Office concept paper on electrified school buses ($250K)."
+- role: Subawardee PI and Freight Policy Tool Development Intern
+  org: New York City Department of Transportation
+  place: NYC DOT
+  start: 2025-09
+  end: 2026-09
+  kind: industry
+  points:
+    - Built a four-step freight demand model calibrated with real-time vehicle counts, and a VMT and GHG assessment tool for NYC freight.
+    - Quantified congestion pricing, off-hour delivery and clean-truck programs in VMT, GHG and air-pollution terms.
+    - Worked with StreetLight, INRIX, Geotab and ATRI data.
+- role: Supply Chain Modeling Intern
+  org: National Laboratory of the Rockies (formerly NREL), Golden, CO
+  place: Golden
+  start: 2024-05
+  end: 2025-01
+  kind: research
+  points:
+    - Coded and calibrated the FAF and CFS freight flow containerization model; robust optimization of intermodal freight under national-scale disruptions.
+    - Developed the electric variant of NREL's open-source FRISM freight simulator for mixed fleets using VNS metaheuristics (SMART 2.0).
+    - Built last-mile VRP, CVRP and VRPPD models benchmarked against Google OR-Tools; designed a county-level freight disaggregation algorithm.
+- role: Graduate Research Assistant
+  org: Utah State University, Logan, UT
+  place: Logan
+  start: 2021-08
+  end: 2025-01
+  kind: research
+  points:
+    - Multistage multi-objective optimization for recharging and scheduling EVs in 1,000+ node networks; hybrid metaheuristic solving large networks in about 730 seconds.
+    - Automated space-time prism accessibility modeling in ArcPy, cutting processing effort by 95%.
+    - Led residential location choice modeling for the Wasatch Front Regional Council, informing TOD and pedestrian infrastructure policy.
+- role: Assistant Professor
+  org: Pokhara University, Nepal
+  place: Pokhara
+  start: 2020-03
+  end: 2021-08
+  kind: teaching
+  points:
+    - Taught graduate Project Planning and Control (100% pass rate).
+- role: Highway Engineer and Project Manager
+  org: Ministry of Physical Infrastructure and Transport, Nepal
+  place: Kathmandu
+  start: 2015-07
+  end: 2021-08
+  kind: industry
+  points:
+    - Managed procurement for a road project of about $40M, from bid documents to contract award; obtained design approval for a 17-mile six-lane road.
+    - Led a site team of 3 engineers, 8 sub-engineers and 15 supervisors. Best Employee Award, 2019, for cutting office costs 19%.
+- role: Assistant Lecturer
+  org: Tribhuvan University, Nepal
+  place: Lalitpur
+  start: 2014-03
+  end: 2015-02
+  kind: teaching
+  points:
+    - Taught undergraduate Transportation Engineering and supervised two final-year projects.

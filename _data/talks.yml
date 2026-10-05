@@ -1,0 +1,112 @@
+# Peer-reviewed conference presentations, numbered as in the CV (newest first).
+- n: 21
+  title: "Online Deep Reinforcement Learning for Integrated Multi-line Electric Bus Scheduling and Charging under Operational Uncertainty"
+  authors: "KC, M. B., Song, Z., & Zhao, C."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 10–14, 2027"
+  year: 2027
+  note: Accepted
+  line: E
+- n: 20
+  title: "Bridging the Gap in Urban Freight Governance: A Strategic Freight Policy Screening Model for New York City"
+  authors: "KC, M. B., & Ponte, C."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 10–14, 2027"
+  year: 2027
+  note: Accepted
+  line: F
+- n: 19
+  title: "Household Residential Location Choice for People with Disabilities: Determinants and Implications for Inclusive Planning"
+  authors: "KC, M. B., Song, Z., Park, K., Chamberlin, B., & Christensen, K."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 2026"
+  year: 2026
+  line: I
+- n: 18
+  title: "Land Use Transition and City Desirability: Case Study of Cache County over Two Decades"
+  authors: "KC, M. B., & Song, Z."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 11–15, 2026"
+  year: 2026
+  line: I
+- n: 17
+  title: "Household Residential Location Choice Modeling for People with Disabilities in Utah"
+  authors: "KC, M. B., Song, Z., Park, K., Chamberlin, B., & Christensen, K."
+  event: "ASCE International Conference on Transportation and Development, Arizona"
+  date: "June 6–8, 2025"
+  year: 2025
+  line: I
+- n: 16
+  title: "Multi-Stage, Multi-School Electric Bus Routing and Scheduling Optimization Using Metaheuristics"
+  authors: "KC, M. B., & Song, Z."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 5–9, 2025"
+  year: 2025
+  line: E
+  file: assets/TRB2025_MSMS_SchoolBusElectrification.pdf
+  file_label: Poster
+- n: 15
+  title: "Integrated Optimized Charging and Economic Analysis of V2G-Enabled School Bus Systems"
+  authors: "KC, M. B., & Song, Z."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 5–9, 2025"
+  year: 2025
+  line: E
+  file: assets/TRB2025_V2G_Poster.pdf
+  file_label: Poster
+- n: 14
+  title: "Inclusive Transport Policy: Mode Choice Behavior of People with Disabilities in Utah"
+  authors: "KC, M. B., & Song, Z."
+  event: "ITE Mountain District Annual Meeting, Big Sky, Montana"
+  date: "June 19–21, 2024"
+  year: 2024
+  line: I
+- n: 13
+  title: "Inclusive Transportation System and Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah"
+  authors: "KC, M. B., Song, Z., Park, K., & Christensen, K."
+  event: "TRB Annual Meeting, Young Members Council 6-Minute Showcase, Washington, DC"
+  date: "January 2024"
+  year: 2024
+  note: Recognized presentation
+  line: I
+  file: assets/TRB2024_Poster_ModeChoice.pdf
+  file_label: Slides
+- n: 12
+  title: "Evolving School Transportation: Bus Electrification with Dynamic Route Optimization and Partial Charging for Mixed Fleets"
+  authors: "KC, M. B., & Song, Z."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 7–11, 2024"
+  year: 2024
+  line: E
+  file: assets/TRB2024_Poster_School_Bus_Electrification.pdf
+  file_label: Poster
+- n: 11
+  title: "Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah"
+  authors: "KC, M. B., Song, Z., Park, K., & Christensen, K."
+  event: "TRB Annual Meeting, Washington, DC"
+  date: "January 7–11, 2024"
+  year: 2024
+  line: I
+  file: "assets/TRB%202024%20Mode%20Choice%20Podium%20Presentation.pdf"
+  file_label: Slides
+- n: 10
+  title: "School Transportation Electrification: Simultaneous Route Optimization, Timetabling, and Partial Charging for Mixed Fleets"
+  authors: "KC, M. B., & Song, Z."
+  event: "ITE Mountain District Annual Meeting, St. George, Utah"
+  date: "June 21–23, 2023"
+  year: 2023
+  line: E
+- n: 9
+  title: "Electric School Buses: Optimal Routing and Partial Charging"
+  authors: "KC, M. B., & Song, Z."
+  event: "USU Student Research Symposium, Logan, Utah"
+  date: "April 12, 2023"
+  year: 2023
+  line: E
+- n: 8
+  title: "School Bus Electrification: Route Optimization, Timetabling, and Partial Charging"
+  authors: "KC, M. B., & Song, Z."
+  event: "College of Engineering Research Week, Utah State University"
+  date: "April 4, 2023"
+  year: 2023
+  line: E

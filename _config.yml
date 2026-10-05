@@ -1,0 +1,16 @@
+# Site settings. Content lives in _data/*.yml; edit those to update the site.
+title: Megh Bahadur KC
+description: >-
+  Transportation engineer and Ph.D. candidate working on transit electrification,
+  freight systems and inclusive mobility through optimization and reinforcement learning.
+url: https://meghkc.com
+baseurl: ""
+lang: en
+exclude:
+  - README.md
+  - LICENSE
+  - REDESIGN_PLAN.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - "*.docx"
