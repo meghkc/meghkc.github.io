@@ -1,474 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">   
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Megh KC - Ph.D. candidate in Civil Engineering specializing in transportation systems and smart mobility.">
-    <title>Home - Megh KC</title>
-    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-    <!-- Preload hero background and key profile image for faster LCP -->
-    <link rel="preload" as="image" href="assets/background_opt_q60.webp" imagesrcset="assets/background_opt_q60.webp" imagesizes="100vw">
-    <link rel="preload" as="image" href="assets/profile_opt_q80.webp">
-    <link rel="stylesheet" href="css/style.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" defer></script> 
-</head>
-<body class="home-page"> 
-    <header>
-    <div class="site-logo" aria-label="Personal Logo">MKC</div>
-    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light mode">🌙</button>
-        <h1>Megh KC</h1>
-        <div class="animated-titles">
-            <span class="title-text">Transportation Engineer</span>
-            <span class="title-separator">|</span>
-            <span class="title-text">Data Analyst</span>
-            <span class="title-separator">|</span>
-            <span class="title-text">Research Scientist</span>
-        </div>
-        <nav>
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="about.html">About</a>
-            <a href="publications.html">Publications</a>
-            <a href="research.html">Research</a>
-            <a href="skills_awards.html">Skills & Awards</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section class="welcome-section">
-            <div class="welcome-header">
-                <h2>Welcome</h2>
-                <a href="assets/Megh_recent CV.pdf" download="Megh_recent CV.pdf" class="cv-link">Download CV</a>
-            </div>
-            
-            <div class="welcome-content">
-                <p>Ph.D. candidate in Civil Engineering at the University at Buffalo, specializing in sustainable public transport, freight systems and intelligent mobility through optimization, AI, machine learning and deep reinforcement learning. 
-                    Over 8 years of combined research, academic and industry experience developing efficient optimization tools, predictive models, techno-economic analyses, advanced data analytics and inclusive planning/policies at NREL, NYCDOT, Utah State University and the Department of Roads. 
-                    Proven achievements include 7+ peer-reviewed publications, 17+ conference presentations, 2 internships, multiple awards and fellowships, effective undergraduate and graduate level teaching and hands-on project management as a Highway Engineer in transport infrastructure design and implementation.
-                <br><br>Please explore my work to learn more about my academic journey, research projects, and publications.
-                </p>
-            </div>
-            
-            <!-- Enhanced Profile Slideshow - Fixed Caption -->
-            <div class="profile-slideshow">
-                <!-- <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" class="slide-img" data-caption="Appointment to the TRB Committee on Transportation and Sustainability, 2025"> -->
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Hydrogen fuel cell Bus_opt_q85_480w.webp 480w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85_768w.webp 768w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85.webp 1000w"><img fetchpriority="high" loading="eager" src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" class="slide-img" width="1000" height="750" data-caption="Exploring hydrogen fuel cell bus technology"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Wireless charging EB_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging EB_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging EB_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" class="slide-img" width="1000" height="750" data-caption="Wireless charging electric bus demonstration @ ASPIRE USU"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Wireless charging test track prototype_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging test track prototype_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging test track prototype_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" class="slide-img" width="1000" height="750" data-caption="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/UB ITE presentation _opt_q85_480w.webp 480w, assets/project gallery/UB ITE presentation _opt_q85_768w.webp 768w, assets/project gallery/UB ITE presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" class="slide-img" width="1000" height="750" data-caption="Invited research presentation at UB ITE seminar, 2025"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Hairpin bend_opt_q60_480w.webp 480w, assets/project gallery/Hairpin bend_opt_q60_768w.webp 768w, assets/project gallery/Hairpin bend_opt_q60.webp 1000w"><img loading="lazy" src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" class="slide-img" width="1000" height="750" data-caption="Field study of a hairpin bend in USA"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Mode choice poster_opt_q85_480w.webp 480w, assets/project gallery/Mode choice poster_opt_q85_768w.webp 768w, assets/project gallery/Mode choice poster_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" class="slide-img" width="1000" height="750" data-caption="Research poster on mode choice behavior for people with disabilities at TRB 2024"></picture>
-                <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 600px" srcset="assets/project gallery/Presentation recognition certificate _opt_q85_480w.webp 480w, assets/project gallery/Presentation recognition certificate _opt_q85_768w.webp 768w, assets/project gallery/Presentation recognition certificate _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" class="slide-img" width="1000" height="750" data-caption="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience"></picture>
-                
-                <!-- Navigation Arrows -->
-                <button class="slideshow-nav-left" aria-label="Previous Image">‹</button>
-                <button class="slideshow-nav-right" aria-label="Next Image">›</button>
-                
-                <!-- Caption Overlay -->
-                <div class="slideshow-caption">
-                    Appointment to the TRB Committee on Transportation and Sustainability, 2025
-                </div>
-                
-                <!-- Small Slideshow Indicators -->
-                <div class="slideshow-indicators">
-                    <span class="slideshow-indicator active small" data-slide="0"></span>
-                    <span class="slideshow-indicator small" data-slide="1"></span>
-                    <span class="slideshow-indicator small" data-slide="2"></span>
-                    <span class="slideshow-indicator small" data-slide="3"></span>
-                    <span class="slideshow-indicator small" data-slide="4"></span>
-                    <span class="slideshow-indicator small" data-slide="5"></span>
-                    <span class="slideshow-indicator small" data-slide="6"></span>
-                    <span class="slideshow-indicator small" data-slide="7"></span>
-                </div>
-            </div>
-        </section>
-        
-        <section id="highlights-section" data-collapsible>
-            <h2 class="section-heading reveal-init">Highlights <span class="accent-badge">Featured</span>
-                <button class="collapsible-toggle" aria-expanded="true" aria-controls="highlights-content" id="toggle-highlights" title="Collapse or expand Highlights">▾</button>
-            </h2>
-            <div id="highlights-content" class="collapsible-content" role="region" aria-labelledby="toggle-highlights">
-            
-            <!-- Python Package Showcase Section -->
-            <div class="package-showcase-section">
-                <div class="package-header">
-                    <h3>🐍 Latest Python Package Release</h3>
-                    <p>Professional-grade freight analytics package now available on PyPI</p>
-                </div>
-                
-                <div class="package-main-card">
-                    <div class="package-icon">📦</div>
-                    <div class="package-content">
-                        <h4>freight-analytics-dashboard</h4>
-                        <p>Complete package ecosystem for advanced US freight transportation analytics with interactive dashboards, CLI tools, and programmatic API.</p>
-                        
-                        <div class="package-ecosystem">
-                            <h5>Complete Package Ecosystem</h5>
-                            <div class="ecosystem-grid">
-                                <div class="ecosystem-item">
-                                    <span class="ecosystem-icon">✅</span>
-                                    <span class="ecosystem-text">PyPI Package: Global Python package distribution</span>
-                                </div>
-                                <div class="ecosystem-item">
-                                    <span class="ecosystem-icon">✅</span>
-                                    <span class="ecosystem-text">GitHub Repository: Professional open-source project</span>
-                                </div>
-                                <div class="ecosystem-item">
-                                    <span class="ecosystem-icon">✅</span>
-                                    <span class="ecosystem-text">Streamlit Cloud: Live web application</span>
-                                </div>
-                                <div class="ecosystem-item">
-                                    <span class="ecosystem-icon">✅</span>
-                                    <span class="ecosystem-text">CLI Application: Command-line tool</span>
-                                </div>
-                                <div class="ecosystem-item">
-                                    <span class="ecosystem-icon">✅</span>
-                                    <span class="ecosystem-text">Python API: Programmatic interface</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="package-features">
-                            <div class="feature-tag-enhanced">Full-Stack Development</div>
-                            <div class="feature-tag-enhanced">DevOps & CI/CD</div>
-                            <div class="feature-tag-enhanced">Open Source</div>
-                            <div class="feature-tag-enhanced">Data Science</div>
-                        </div>
-                        
-                        <div class="package-installation">
-                            <h5>🚀 Quick Start</h5>
-                            <div class="install-commands">
-                                <div class="command-item">
-                                    <code>pip install freight-analytics-dashboard</code>
-                                    <button class="copy-btn" data-command="pip install freight-analytics-dashboard" aria-label="Copy install command">📋</button>
-                                </div>
-                                <div class="command-item">
-                                    <code>freight-dashboard</code>
-                                    <button class="copy-btn" data-command="freight-dashboard" aria-label="Copy launch command">📋</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="package-links">
-                            <a href="https://pypi.org/project/freight-analytics-dashboard/" target="_blank" class="package-link pypi">
-                                <span class="link-icon">📦</span>
-                                PyPI Package
-                            </a>
-                            <a href="https://github.com/meghkc/DashBoard" target="_blank" class="package-link github">
-                                <span class="link-icon">🔗</span>
-                                GitHub Repo
-                            </a>
-                            <a href="https://meghkc-dashboard-freight-analysis.streamlit.app/" target="_blank" class="package-link demo">
-                                <span class="link-icon">🌍</span>
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Featured GitHub Repositories Section -->
-            <div class="repositories-section">
-                <div class="repositories-header">
-                    <h3>🚀 Featured Projects & Repositories</h3>
-                    <p>Explore my open-source contributions and research tools</p>
-                </div>
-                <div class="repositories-container">
-                    <div class="repositories-scroll">
-                        <!-- Repository 1: NREL-eFRISM -->
-                        <div class="repository-card">
-                            <div class="repo-icon">🚛</div>
-                            <div class="repo-content">
-                                <h4>NREL-eFRISM</h4>
-                                <p>Electric Freight Truck Route Optimization with optimal charging station location selection in US freight networks using Variable Neighborhood Search metaheuristics.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">Route Optimization</span>
-                                    <span class="feature-tag">Charging Scheduling</span>
-                                    <span class="feature-tag">Cost Minimization</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge python">🐍 Python</span>
-                                        <span class="category-badge">Opensource Tool</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/NREL-eFRISM" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+---
+layout: default
+nav: home
+---
+{% assign p = site.data.profile %}
+{% assign pubs = site.data.publications %}
+{% assign published = pubs | where: "status", "published" %}
+{% assign preprints = pubs | where: "status", "preprint" %}
+{% assign reviewing = pubs | where: "status", "review" %}
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow">{{ p.headline }}</p>
+    <h1>{{ p.name }}</h1>
+    <p class="lede">{{ p.statement }}</p>
+    <p class="hero-sub">{{ p.secondary }}</p>
+    <div class="cta">
+      <a class="btn btn-solid" href="{{ p.cv }}" target="_blank" rel="noopener">Download CV <span class="muted-inv">PDF</span></a>
+      <a class="btn" href="{{ p.links[0].url }}" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="{{ p.photo }}" srcset="{{ p.photo_small }} 480w, {{ p.photo }} 768w" sizes="(max-width: 720px) 60vw, 320px" width="768" height="763" alt="Portrait of {{ p.name }}" fetchpriority="high">
+  </figure>
+  <dl class="stats">
+    <div><dt>Peer-reviewed articles</dt><dd>{{ published.size }}</dd></div>
+    <div><dt>Preprints and papers under review</dt><dd>{{ preprints.size | plus: reviewing.size }}</dd></div>
+    <div><dt>Conference presentations</dt><dd>{{ site.data.talks.size }}+</dd></div>
+    <div><dt>TRB manuscripts coordinated as editor</dt><dd>{{ site.data.service.editor.manuscripts }}</dd></div>
+  </dl>
+</section>
 
-                        <!-- Repository 2: School Transport Electrification -->
-                        <div class="repository-card">
-                            <div class="repo-icon">🚌</div>
-                            <div class="repo-content">
-                                <h4>School Transport Electrification</h4>
-                                <p>Two-stage model for solving large school networks with routing and scheduling optimization for electric school bus systems with on-route charging plans.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">Route Optimization</span>
-                                    <span class="feature-tag">Charging Management</span>
-                                    <span class="feature-tag">Metaheuristics</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge python">🐍 Python</span>
-                                        <span class="tech-badge gams">⚙️ GAMS/Gurobi</span>
-                                        <span class="category-badge">Research Tool</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/Multi_School_multi_school_routing_and_scheduling" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+<section class="band" id="news" aria-labelledby="news-h">
+  <div class="wrap two-col">
+    <h2 id="news-h" class="sec-h">News</h2>
+    <ol class="news">
+      {% for n in site.data.news limit: 6 %}
+      <li><span class="date">{{ n.date }}</span><p>{{ n.text }}{% if n.url %} <a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.link }}</a>{% endif %}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
-                        <!-- Repository 3: Space Time Prism Model -->
-                        <div class="repository-card">
-                            <div class="repo-icon">♿</div>
-                            <div class="repo-content">
-                                <h4>Space Time Prism Accessibility Model</h4>
-                                <p>Understanding daily travel behavior of people with and without disabilities using Space Time Prism Model with automated ArcGIS Pro algorithms in arcpy environment.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">Space Time Prism</span>
-                                    <span class="feature-tag">ArcPy Coding</span>
-                                    <span class="feature-tag">DPPA</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge jupyter">📓 Jupyter</span>
-                                        <span class="tech-badge arcgis">🗺️ ArcGIS Pro</span>
-                                        <span class="category-badge">Research Automation</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/Accessibility-Measures-by-using-Space-Time-Prism-Model" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+<section class="wrap" id="about" aria-labelledby="about-h">
+  <div class="two-col">
+    <h2 id="about-h" class="sec-h">About</h2>
+    <div class="prose">
+      {% for para in p.bio %}<p>{{ para }}</p>{% endfor %}
+      <h3 class="mini-h">Education</h3>
+      <ul class="edu">
+        {% for e in site.data.education %}
+        <li><span class="date">{{ e.when }}</span><div><b>{{ e.degree }}</b>, {{ e.school }}<br><span class="muted">{{ e.detail }}</span></div></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 
-                        <!-- Repository 4: Deep Reinforcement Learning Framework -->
-                        <div class="repository-card">
-                            <div class="repo-icon">🚍</div>
-                            <div class="repo-content">
-                                <h4>DRL Transit Electrification Framework</h4>
-                                <p>PPO-based Deep Reinforcement Learning Framework for simultaneous fleet optimization and charging scheduling for multi-line bus transit systems in dynamic environments.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">DRL Agent</span>
-                                    <span class="feature-tag">MILP</span>
-                                    <span class="feature-tag">Uncertainty</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge python">🐍 Python</span>
-                                        <span class="tech-badge gurobi">🔧 Gurobi</span>
-                                        <span class="category-badge">Transit Scheduling</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/RL-ESB" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+<section class="wrap" id="research" aria-labelledby="research-h">
+  <div class="sec-head">
+    <h2 id="research-h" class="sec-h">Research lines</h2>
+    <p class="sec-note">Three lines of work share one toolkit: mathematical optimization, metaheuristics and reinforcement learning applied to real agency data. Each line's projects, papers and code carry its route bullet across the site.</p>
+  </div>
+  <div class="lines">
+    {% for th in site.data.themes %}{% if th.code != "P" %}
+    {% assign lpubs = pubs | where: "line", th.code %}
+    {% assign ltalks = site.data.talks | where: "line", th.code %}
+    <article class="line-card line-{{ th.code }}">
+      <header>
+        {% include line-badge.html code=th.code %}
+        <div><h3>{{ th.name }}</h3><p class="muted">{{ th.short }}</p></div>
+      </header>
+      <p>{{ th.summary }}</p>
+      <ul class="chips" aria-label="Methods">{% for m in th.methods %}<li>{{ m }}</li>{% endfor %}</ul>
+      <h4 class="mini-h">Projects</h4>
+      <ul class="stops">
+        {% assign lp = site.data.projects | where: "line", th.code %}
+        {% for pr in lp %}
+        <li class="{% if pr.status == 'active' %}is-active{% endif %}"><b>{{ pr.title }}</b><span class="muted">{{ pr.sponsor }} · {{ pr.at }}{% if pr.status == 'active' %} · <em>active</em>{% endif %}</span></li>
+        {% endfor %}
+      </ul>
+      <a class="line-link" href="publications.html#{{ th.code }}">{% if lpubs.size > 0 %}{{ lpubs.size }} {% if lpubs.size == 1 %}paper{% else %}papers{% endif %} and {% endif %}{{ ltalks.size }} {% if ltalks.size == 1 %}talk{% else %}talks{% endif %} on this line</a>
+    </article>
+    {% endif %}{% endfor %}
+  </div>
+</section>
 
-                        <!-- Repository 5: Smart Charging and V2G Framework -->
-                        <div class="repository-card">
-                            <div class="repo-icon">🔋</div>
-                            <div class="repo-content">
-                                <h4>Smart Charging & V2G Framework</h4>
-                                <p>Novel framework for integrated optimization of charging and V2G for electric school buses, considering time-of-use electricity prices and operational constraints.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">Smart Charging</span>
-                                    <span class="feature-tag">V2G</span>
-                                    <span class="feature-tag">Revenue Optimization</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge python">🐍 Python</span>
-                                        <span class="tech-badge gams">⚙️ GAMS</span>
-                                        <span class="category-badge">Utility Tool</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/Strategic-Charging-Decision-enabling-V2G-School-Buses-and-Optimum-Battery-Size" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+<section class="band" id="selected" aria-labelledby="sel-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="sel-h" class="sec-h">Selected papers</h2>
+      <a class="more" href="publications.html">All {{ pubs.size }} papers and {{ site.data.talks.size }} talks</a>
+    </div>
+    <ol class="pubs">
+      {% assign sel = pubs | where: "selected", true %}
+      {% for pb in sel %}{% include pub.html p=pb %}{% endfor %}
+    </ol>
+  </div>
+</section>
 
-                        <!-- Repository 6: Advanced US Freight Analytics Dashboard -->
-                        <div class="repository-card">
-                            <div class="repo-icon">📊</div>
-                            <div class="repo-content">
-                                <h4>Advanced US Freight Analytics Dashboard</h4>
-                                <p>An interactive, data-driven dashboard for comprehensive analysis of US freight transportation patterns across rail and port modes. This enhanced visualization platform provides deep insights into seasonal trends, performance metrics, and predictive analytics for freight transportation.</p>
-                                <div class="repo-features">
-                                    <span class="feature-tag">Data Visualization</span>
-                                    <span class="feature-tag">Freight Analytics</span>
-                                    <span class="feature-tag">Interactive Dashboard</span>
-                                </div>
-                                <div class="repo-footer">
-                                    <div class="repo-tech">
-                                        <span class="tech-badge python">🐍 Python</span>
-                                        <span class="tech-badge streamlit">📈 Streamlit</span>
-                                        <span class="category-badge">Web App</span>
-                                    </div>
-                                    <a href="https://github.com/meghkc/DashBoard" target="_blank" class="repo-link">
-                                        View Project <span>→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Scroll Navigation -->
-                    <div class="scroll-navigation">
-                        <button class="scroll-btn scroll-left" aria-label="Scroll Left">‹</button>
-                        <div class="scroll-indicators">
-                            <span class="indicator active small"></span>
-                            <span class="indicator small"></span>
-                            <span class="indicator small"></span>
-                            <span class="indicator small"></span>
-                            <span class="indicator small"></span>
-                            <span class="indicator small"></span>
-                        </div>
-                        <button class="scroll-btn scroll-right" aria-label="Scroll Right">›</button>
-                    </div>
-                </div>
-            </div>
+<section class="wrap" id="experience" aria-labelledby="exp-h">
+  <div class="sec-head">
+    <h2 id="exp-h" class="sec-h">Experience</h2>
+    <p class="sec-note">From highway projects in Nepal to transit research in the US. Select a stop for details.</p>
+  </div>
+  <div class="route" data-route>
+    <ol class="route-line" role="tablist" aria-label="Career stops">
+      {% assign exp_rev = site.data.experience | reverse %}
+      {% for x in exp_rev %}
+      <li role="presentation"><button type="button" role="tab" class="stop stop-{{ x.kind }}" id="stop-{{ forloop.index }}" aria-controls="stop-panel-{{ forloop.index }}" aria-selected="{% if forloop.last %}true{% else %}false{% endif %}"{% unless forloop.last %} tabindex="-1"{% endunless %}><span class="stop-dot" aria-hidden="true"></span><span class="stop-name">{{ x.place }}</span><span class="stop-year">{{ x.start | slice: 0, 4 }}</span></button></li>
+      {% endfor %}
+    </ol>
+    <p class="route-legend" aria-hidden="true"><span><i class="line-E"></i>Research</span><span><i class="line-F"></i>Industry and government</span><span><i class="line-I"></i>Teaching</span></p>
+    {% for x in exp_rev %}
+    <div class="route-panel" role="tabpanel" id="stop-panel-{{ forloop.index }}" aria-labelledby="stop-{{ forloop.index }}"{% unless forloop.last %} hidden{% endunless %}>
+      <p class="date">{{ x.start | replace: "-", "/" }} – {{ x.end | replace: "-", "/" }} · {{ x.kind | capitalize }}</p>
+      <h3>{{ x.role }}</h3>
+      <p class="org">{{ x.org }}</p>
+      <ul>{% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="split">
+    <div>
+      <h3 class="mini-h">Teaching</h3>
+      <ul class="plain">
+        {% for t in site.data.teaching %}<li><b>{{ t.role }}</b>, {{ t.where }} <span class="date">{{ t.years }}</span><br><span class="muted">{{ t.courses }}</span></li>{% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3 class="mini-h">Tools</h3>
+      <dl class="skills">
+        {% for s in site.data.skills %}<div><dt>{{ s.group }}</dt><dd>{{ s.items | join: " · " }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
 
-            <!-- EXISTING: News/Project Gallery Tabs -->
-            <nav class="about-tabs" role="tablist">
-                <a href="#news-highlights-panel" class="tab-link active" role="tab" aria-controls="news-highlights-panel" aria-selected="true" id="news-highlights-tab">News/Highlights</a>
-                <a href="#project-gallery-panel" class="tab-link" role="tab" aria-controls="project-gallery-panel" aria-selected="false" id="project-gallery-tab">Project Gallery</a>
-            </nav>
-            <div class="tab-content">
-                <div id="news-highlights-panel" class="tab-panel active" role="tabpanel" aria-labelledby="news-highlights-tab">
-                    <h3>News/Highlights</h3>
-                    <p>September 11th Memorial Fellowship Award: <a href="https://www.buffalo.edu/istl/news-events/news.host.html/content/shared/www/istl/istl-news/csee-student-awarded-september-11th-memorial-fellowship-for-ai-d.detail.html" target="_blank"><i>CSEE student Megh KC awarded a prestigious Fellowship by NYMTC</i></a></p>
-                    <p>Hosted a Data Visualization Dashboard: <a href="https://meghkc-dashboard-freight-analysis.streamlit.app/" target="_blank"> <i>Advanced US Freight Analytics Dashboard</i></a></p>
-                    <p>Check out my recent research news feature: <a href="https://engineering.usu.edu/news/main-feed/2024/usu-engineering-scholar-showcases-transportation-research" target="_blank"> <i>USU Engineering Scholar Showcases Transportation Research</i></a></p>
-                    <p>TRB 2025 School Bus Electrification Research: <a href="assets/TRB2025_MSMS_SchoolBusElectrification.pdf" target="_blank"><i>Integrated Routing & Scheduling of Electric School Buses</i></a></p>
-                    <p>TRB 2025 Vehicle-to-Grid Research: <a href="assets/TRB2025_V2G_Poster.pdf" target="_blank"><i>Exploring Vehicle-to-Grid Integration of Electric School Buses</i></a></p>
-                    <p>TRB 2024 Podium Presentation: <a href="assets/TRB 2024 Mode Choice Podium Presentation.pdf" target="_blank"><i>Inclusive transportation planning research</i></a></p>
-                    <p>TRB 2024 Bus Electrification Research: <a href="assets/TRB2024_Poster_School_Bus_Electrification.pdf" target="_blank"><i>Integrated Route Optimization and Charging</i></a></p>
-                    <p>TRB 2024 YMC- S&R Presentation: <a href="assets/TRB2024_Poster_ModeChoice.pdf" target="_blank"><i>Mode Choice behavior of People with disabilities</i></a></p>
-                    <p>Short Video: <a href="https://youtu.be/PmMuCPTx9_Q" target="_blank"><i>School bus electrification research showcase video description</i></a></p>
-                </div>
-                <div id="project-gallery-panel" class="tab-panel" role="tabpanel" aria-labelledby="project-gallery-tab">
-                    <h3>Project Gallery</h3>
-                    <div class="slideshow-container">
-                        <button class="prev" aria-label="Previous Image">&#10094;</button>
-                        <div class="slide">
-                            <!-- <img src="assets/project gallery/trb_appointment.JPG" alt="TRB Committee Appointment" data-description="Appointment to the TRB Committee on Transportation and Sustainability, 2025."> -->
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/First TRB 2022_opt_q85_480w.webp 480w, assets/project gallery/First TRB 2022_opt_q85_768w.webp 768w, assets/project gallery/First TRB 2022_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/First TRB 2022.JPG" alt="First TRB 2022" width="1000" height="1044" data-description="My first presentation at TRB 2022."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/UB ITE presentation _opt_q85_480w.webp 480w, assets/project gallery/UB ITE presentation _opt_q85_768w.webp 768w, assets/project gallery/UB ITE presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB ITE presentation .JPG" alt="UB ITE presentation" width="1000" height="750" data-description="Invited research Presentation at UB ITE seminar, 2025."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Hairpin bend_opt_q60_480w.webp 480w, assets/project gallery/Hairpin bend_opt_q60_768w.webp 768w, assets/project gallery/Hairpin bend_opt_q60.webp 1000w"><img loading="lazy" src="assets/project gallery/Hairpin bend.JPG" alt="Hairpin bend" width="1000" height="750" data-description="Field study of a hairpin bend in USA."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Mode choice poster_opt_q85_480w.webp 480w, assets/project gallery/Mode choice poster_opt_q85_768w.webp 768w, assets/project gallery/Mode choice poster_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Mode choice poster.JPG" alt="Mode choice poster" width="1000" height="750" data-description="Research Poster on mode choice behavior for people with disabilities at TRB 2024."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Presentation recognition certificate _opt_q85_480w.webp 480w, assets/project gallery/Presentation recognition certificate _opt_q85_768w.webp 768w, assets/project gallery/Presentation recognition certificate _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Presentation recognition certificate .JPG" alt="Presentation recognition certificate" width="1000" height="750" data-description="Certificate for a recognized presentation by TRB Young Member Council for Sustainability & Resilience."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Research getting attention _opt_q85_480w.webp 480w, assets/project gallery/Research getting attention _opt_q85_768w.webp 768w, assets/project gallery/Research getting attention _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Research getting attention .JPG" alt="Research getting attention" width="1000" height="750" data-description="Metaheuristic alrogithmic model research for School Bus Electrification getting attention."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB partial charging poster presentation _opt_q85_480w.webp 480w, assets/project gallery/TRB partial charging poster presentation _opt_q85_768w.webp 768w, assets/project gallery/TRB partial charging poster presentation _opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB partial charging poster presentation .JPG" alt="TRB partial charging poster presentation" width="1000" height="750" data-description="Poster on Bus electrification through MIP mathematical model considering partial charging at TRB 2024."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Hydrogen fuel cell Bus_opt_q85_480w.webp 480w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85_768w.webp 768w, assets/project gallery/Hydrogen fuel cell Bus_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Hydrogen fuel cell Bus.JPG" alt="Hydrogen fuel cell Bus" width="1000" height="750" data-description="Exploring hydrogen fuel cell bus technology."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Wireless charging test track prototype_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging test track prototype_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging test track prototype_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging test track prototype.JPG" alt="Wireless charging test track prototype" width="1000" height="750" data-description="Prototype of a wireless charging test track at ASPIRE, NSF ERC @ Utah State University."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/LEC peer review_opt_q85_480w.webp 480w, assets/project gallery/LEC peer review_opt_q85_768w.webp 768w, assets/project gallery/LEC peer review_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/LEC peer review.JPG" alt="LEC peer review recognition" width="1000" height="750" data-description="Recognition for LEC peer review."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Nepalese community at TRB_opt_q80_480w.webp 480w, assets/project gallery/Nepalese community at TRB_opt_q80_768w.webp 768w, assets/project gallery/Nepalese community at TRB_opt_q80.webp 1000w"><img loading="lazy" src="assets/project gallery/Nepalese community at TRB.JPG" alt="Nepalese community at TRB" width="1000" height="750" data-description="Nepalese  transportation communities gathering at TRB 2025."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB podium presentation_opt_q85_480w.webp 480w, assets/project gallery/TRB podium presentation_opt_q85_768w.webp 768w, assets/project gallery/TRB podium presentation_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB podium presentation.JPG" alt="TRB podium presentation" width="1000" height="750" data-description="Podium presentation on Mode Choice Modeling for people with disabilities at TRB 2024."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/TRB presentation recognition_opt_q75_480w.webp 480w, assets/project gallery/TRB presentation recognition_opt_q75_768w.webp 768w, assets/project gallery/TRB presentation recognition_opt_q75.webp 1000w"><img loading="lazy" src="assets/project gallery/TRB presentation recognition.JPG" alt="TRB presentation recognition" width="1000" height="750" data-description="Recognition for TRB presentation at 103rd TRB Annual Meeting."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/UB Group photo_opt_q85_480w.webp 480w, assets/project gallery/UB Group photo_opt_q85_768w.webp 768w, assets/project gallery/UB Group photo_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/UB Group photo.JPG" alt="UB Group photo" width="1000" height="750" data-description="Group photo after University at Buffalo reception & research Showcases during TRB annual meeting, 2025."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Wireless charging EB_opt_q85_480w.webp 480w, assets/project gallery/Wireless charging EB_opt_q85_768w.webp 768w, assets/project gallery/Wireless charging EB_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Wireless charging EB.JPG" alt="Wirelessly charging EB" width="1000" height="750" data-description="Wireless charging electric bus demonstration @ ASPIRE USU."></picture>
-                            <picture><source type="image/webp" sizes="(max-width: 700px) 100vw, 450px" srcset="assets/project gallery/Soten peer review_opt_q85_480w.webp 480w, assets/project gallery/Soten peer review_opt_q85_768w.webp 768w, assets/project gallery/Soten peer review_opt_q85.webp 1000w"><img loading="lazy" src="assets/project gallery/Soten peer review.JPG" alt="Soten peer review" width="1000" height="750" data-description="Peer review recognition from JoTSE."></picture>
-                        </div>
-                        <button class="next" aria-label="Next Image">&#10095;</button>
-                        <p class="slide-description">My first presentation at TRB 2022.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="band" id="code" aria-labelledby="code-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="code-h" class="sec-h">Code and tools</h2>
+      <a class="more" href="https://github.com/meghkc" target="_blank" rel="noopener">github.com/meghkc</a>
+    </div>
+    <div class="code-grid">
+      {% for sw in site.data.software %}
+      <article class="code-card{% if forloop.first %} code-card-wide{% endif %}">
+        <p class="code-kind">{% include line-badge.html code=sw.line %} {{ sw.kind }}</p>
+        <h3>{{ sw.name }}</h3>
+        <p>{{ sw.text }}</p>
+        {% if sw.install %}<div class="install"><code id="install-cmd">{{ sw.install }}</code><button type="button" class="copy-btn" data-copy="{{ sw.install }}">Copy</button></div>{% endif %}
+        <p class="code-links">{% for l in sw.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-        <!-- Research Impact Section -->
-        <section class="research-impact-section" id="research-impact" data-collapsible>
-            <h2 class="section-heading reveal-init">Research Impact <span class="accent-badge">Impact</span>
-                <button class="collapsible-toggle" aria-expanded="true" aria-controls="research-impact-content" id="toggle-research-impact" title="Collapse or expand Research Impact">▾</button>
-                <button class="chart-refresh-btn" type="button" hidden aria-label="Refresh charts" title="Refresh charts">↻</button>
-            </h2>
-            <div id="research-impact-content" class="collapsible-content" role="region" aria-labelledby="toggle-research-impact">
-            
-            <div class="metrics-grid">
-                <div class="metric-card highlight">
-                    <div class="metric-number" data-target="61">0</div>
-                    <div class="metric-label">Total Citations</div>
-                    <div class="metric-icon">📊</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number" data-target="4">0</div>
-                    <div class="metric-label">H-Index</div>
-                    <div class="metric-icon">📈</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number" data-target="376">0</div>
-                    <div class="metric-label">RI Score</div>
-                    <div class="metric-icon">🔬</div>
-                </div>
-                <div class="metric-card highlight">
-                    <div class="metric-number" data-target="138433">0</div>
-                    <div class="metric-label">Total Reads</div>
-                    <div class="metric-icon">👁️</div>
-                </div>
-            </div>
+<section class="wrap" id="service" aria-labelledby="svc-h">
+  <div class="sec-head"><h2 id="svc-h" class="sec-h">Service and recognition</h2></div>
+  {% assign sv = site.data.service %}
+  <div class="svc">
+    <div class="svc-feature">
+      <p class="big">{{ sv.editor.manuscripts }}</p>
+      <p><b>{{ sv.editor.role }}</b>, {{ sv.editor.years }}. Coordinated peer review for {{ sv.editor.manuscripts }} manuscripts on transit operations, bus electrification and demand-responsive transit.</p>
+    </div>
+    <div>
+      <h3 class="mini-h">Committees and memberships</h3>
+      <ul class="plain">{% for c in sv.committees %}<li>{{ c.name }} <span class="date">{{ c.years }}</span></li>{% endfor %}</ul>
+      <h3 class="mini-h">Reviewer</h3>
+      <p class="muted">{{ sv.reviewer | join: " · " }}</p>
+      <h3 class="mini-h">Licenses</h3>
+      <ul class="plain">{% for l in sv.licenses %}<li>{{ l }}</li>{% endfor %}</ul>
+    </div>
+    <div id="awards">
+      <h3 class="mini-h">Awards</h3>
+      <ul class="awards">
+        {% for a in site.data.awards %}<li><span class="date">{{ a.year }}</span><div><b>{{ a.name }}</b>{% if a.amount %} <span class="amt">{{ a.amount }}</span>{% endif %}<br><span class="muted">{{ a.by }}</span></div></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 
-            <div class="impact-visualization">
-                <div class="charts-grid">
-                    <div class="chart-container">
-                        <h4>Citations Growth</h4>
-                        <p id="citationsChartDesc" class="visually-hidden">Line chart showing cumulative citation counts by year.</p>
-                        <canvas id="citationsChart" aria-describedby="citationsChartDesc"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h4>Publications Timeline</h4>
-                        <p id="publicationsChartDesc" class="visually-hidden">Bar chart showing cumulative total publications by year.</p>
-                        <canvas id="publicationsChart" aria-describedby="publicationsChartDesc"></canvas>
-                    </div>
-                </div>
-            </div>
+<section class="band" id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="gal-h" class="sec-h">In the field</h2><p class="sec-note">Test tracks, posters and TRB meetings.</p></div>
+  </div>
+  <ul class="gallery" tabindex="0" aria-label="Photo gallery, scroll sideways">
+    {% for g in site.data.gallery %}
+    <li><button type="button" class="gal-item" data-src="assets/project%20gallery/{{ g.file | uri_escape | replace: ' ', '%20' }}" data-caption="{{ g.caption | escape }}"><img src="assets/project%20gallery/{{ g.file | uri_escape | replace: ' ', '%20' }}" alt="{{ g.caption | escape }}" loading="lazy" width="768" height="576"></button><span class="gal-cap">{{ g.caption }}</span></li>
+    {% endfor %}
+  </ul>
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <form method="dialog"><button class="lb-close" aria-label="Close photo">Close</button></form>
+    <img alt="">
+    <p class="lb-cap"></p>
+  </dialog>
+</section>
 
-            <div class="research-highlights">
-                <h4>Research Highlights</h4>
-                <div class="highlight-grid"> 
-                    <div class="highlight-item">
-                        <strong>17</strong> Conference Presentations
-                    </div>
-                    <div class="highlight-item">
-                        <strong>6+</strong> Journal Publications
-                    </div>
-                    <div class="highlight-item">
-                        <strong>4</strong> Major Research Projects
-                    </div>
-                    <div class="highlight-item">
-                        <strong>NREL, DOE, NYCDOT</strong> Collaboration
-                    </div>
-                </div>
-            </div>
-
-            <!-- Live region for announcing metric completion -->
-            <div id="metrics-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/megh-kc-2015/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                <picture><source type="image/webp" srcset="assets/linkedin_icon.webp"><img loading="lazy" src="assets/linkedin_icon.JPG" alt="LinkedIn" width="24" height="24"></picture>
-            </a>
-
-            <a href="https://github.com/meghkc" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                <picture><source type="image/webp" srcset="assets/github_icon.webp"><img loading="lazy" src="assets/github_icon.JPG" alt="GitHub" width="24" height="24"></picture>
-            </a>
-            
-            <a href="https://www.researchgate.net/profile/Megh-KC" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate Profile">
-                <picture><source type="image/webp" srcset="assets/researchgate_icon_opt_q85.webp"><img loading="lazy" src="assets/researchgate_icon.JPG" alt="ResearchGate" width="24" height="24"></picture>
-            </a>
-        </div>
-        
-        <p>© 2025 Megh KC. All rights reserved.</p>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<section class="wrap" id="contact" aria-labelledby="contact-h">
+  <div class="two-col">
+    <h2 id="contact-h" class="sec-h">Contact</h2>
+    <div class="contact">
+      <div>
+        <p>I am glad to talk about transit electrification, freight modeling, collaborations and speaking invitations.</p>
+        <ul class="emails">
+          {% for e in p.emails %}<li><a href="mailto:{{ e }}">{{ e }}</a><button type="button" class="copy-btn" data-copy="{{ e }}" aria-label="Copy {{ e }}">Copy</button></li>{% endfor %}
+        </ul>
+        <p class="muted">{{ p.location }}</p>
+        <p class="foot-links">{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
+      </div>
+      <form class="form" action="{{ p.formspree }}" method="POST" id="contact-form">
+        <label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required>
+        <label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required>
+        <label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="5" required></textarea>
+        <button class="btn btn-solid" type="submit">Send message</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>

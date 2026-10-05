@@ -1,0 +1,91 @@
+# status: published | preprint | review | preparation
+# line: E | F | I | P  (see themes.yml)
+- title: "School Transport Electrification: Adoption, Strategies, Methods and Policy. A Comprehensive Review"
+  authors: "KC, M. B., & Song, Z."
+  year: 2026
+  venue: arXiv preprint
+  status: preprint
+  line: E
+  doi: 10.48550/arXiv.2601.00838
+- title: "Evolving School Transportation: Integrated Dynamic Route Optimization and Partial Charging for Mixed Fleets"
+  authors: "KC, M. B., & Song, Z."
+  year: 2025
+  venue: arXiv preprint
+  status: preprint
+  line: E
+  doi: 10.48550/arXiv.2511.00600
+- title: "Understanding Mode Choice Behavior of People with Disabilities: A Case Study in Utah"
+  authors: "KC, M. B., Song, Z., Park, K., & Christensen, K."
+  year: 2025
+  venue: arXiv preprint
+  status: preprint
+  line: I
+  doi: 10.48550/arXiv.2511.11748
+- title: "Land Use Transition and City Desirability: Case Study of Cache County Over Two Decades"
+  authors: "KC, M. B."
+  year: 2025
+  venue: "Growth and Change: A Journal of Urban and Regional Policy, 56(4)"
+  status: published
+  line: I
+  doi: 10.1111/grow.70057
+  selected: true
+- title: "Perception Based Assessment of Bidding Practices and Effectiveness of E-Bidding System in Nepal"
+  authors: "KC, M. B., Mishra, A. K., & Karki, R."
+  year: 2020
+  venue: "East African Scholars Journal of Economics, Business and Management, 3(7), 588–597"
+  status: published
+  line: P
+  pdf: assets/paper2.pdf
+- title: "Association of Number of Bidders and Minimum Bid Ratio with Effect of E-bidding of Different Projects"
+  authors: "Mishra, A. K., KC, M. B., & Aithal, P. S."
+  year: 2020
+  venue: "International Journal of Management, Technology, and Social Sciences, 5(2), 201–215"
+  status: published
+  line: P
+  pdf: assets/paper3.pdf
+- title: "Bidding Trends of Contracts Based on Types and Sizes of Projects under Road Divisions Butwal and Shivapur"
+  authors: "KC, M. B., & Mishra, A. K."
+  year: 2019
+  venue: "Journal of Advanced Research in Construction and Urban Architecture, 4(4), 7–16"
+  status: published
+  line: P
+  doi: 10.24321/2456.9925.201905
+- title: "Deep Reinforcement Learning Framework for Integrated Fleet and Charging Management for Electric Bus Transit Systems in a Dynamic Environment"
+  authors: "KC, M. B., Song, Z., & Zhao, C."
+  year: 2026
+  venue: "Transportation Research Part C (under review); TRB Annual Meeting 2027"
+  status: review
+  line: E
+  selected: true
+- title: "Bus Electrification: Fleet Optimization and Charging Management Considering Partial Recharges, TOU and Demand Charges"
+  authors: "KC, M. B., & Song, Z."
+  year: 2026
+  venue: "Transportation Research Interdisciplinary Perspectives (under review)"
+  status: review
+  line: E
+- title: "Integrated Optimized Charging Decision and Optimal Battery Sizing of V2G-Enabled Electric School Bus Systems Including Demand Charges and Battery Ageing"
+  authors: "KC, M. B., & Song, Z."
+  year: 2025
+  venue: "Applied Energy (under review)"
+  status: review
+  line: E
+  selected: true
+- title: "Household Residential Location Choice Modeling for People with Disabilities in Utah"
+  authors: "KC, M. B., Song, Z., Park, K., Chamberlin, B., & Christensen, K."
+  year: 2025
+  venue: "Transportation Research Part A (under review)"
+  status: review
+  line: I
+- title: "Multi-Agent Deep Reinforcement Learning for Integrated Bus Scheduling and Charging Management under Uncertainty in Multi-Line Public Transit Operation"
+  authors: "KC, M. B., & Song, Z."
+  year: 2026
+  venue: "In preparation for Transportation Research Part C"
+  status: preparation
+  line: E
+  selected: true
+- title: "Multi-Stage, Multi-School Electric Bus Routing and Scheduling Optimization with Recharging and Bus Re-use Using Metaheuristics"
+  authors: "KC, M. B., & Song, Z."
+  year: 2025
+  venue: "In preparation"
+  status: preparation
+  line: E
