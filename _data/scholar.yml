@@ -1,12 +1,14 @@
 # Copy these from your Google Scholar profile ("Cited by" box and the per-year bar chart).
-# The site computes the cumulative line and totals from `by_year`.
-updated: Dec 2025
+# total is Scholar's "All" citations; by_year drives the chart.
+updated: Oct 2026
 profile: https://scholar.google.com/citations?user=-qMDe58AAAAJ
+total: 65
 h_index: 4
 by_year:
   - { year: 2020, citations: 5 }
-  - { year: 2021, citations: 7 }
-  - { year: 2022, citations: 13 }
-  - { year: 2023, citations: 13 }
-  - { year: 2024, citations: 10 }
-  - { year: 2025, citations: 13 }
+  - { year: 2021, citations: 1 }
+  - { year: 2022, citations: 6 }
+  - { year: 2023, citations: 2 }
+  - { year: 2024, citations: 12 }
+  - { year: 2025, citations: 7 }
+  - { year: 2026, citations: 30 }

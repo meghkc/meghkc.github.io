@@ -7,8 +7,8 @@ nav: home
 {% assign published = pubs | where: "status", "published" %}
 {% assign preprints = pubs | where: "status", "preprint" %}
 {% assign reviewing = pubs | where: "status", "review" %}
-<div class="hero-band">
-<div class="hero-bg" style="background-image: url('assets/project%20gallery/Wireless%20charging%20EB_opt_q85.webp')" aria-hidden="true"></div>
+<div class="hero-band hero-band-net">
+<canvas class="hero-canvas" aria-hidden="true"></canvas>
 <section class="hero wrap">
   <div class="hero-text">
     <p class="eyebrow">{{ p.headline }}</p>
@@ -150,7 +150,7 @@ nav: home
     <ol class="route-line" role="tablist" aria-label="Career stops">
       {% assign exp_rev = site.data.experience | reverse %}
       {% for x in exp_rev %}
-      <li role="presentation"><button type="button" role="tab" class="stop stop-{{ x.kind }}" id="stop-{{ forloop.index }}" aria-controls="stop-panel-{{ forloop.index }}" aria-selected="{% if forloop.last %}true{% else %}false{% endif %}"{% unless forloop.last %} tabindex="-1"{% endunless %}><span class="stop-dot" aria-hidden="true"></span><span class="stop-name">{{ x.place }}</span><span class="stop-year">{{ x.start | slice: 0, 4 }}</span></button></li>
+      <li role="presentation"><button type="button" role="tab" class="stop stop-{{ x.kind }}" id="stop-{{ forloop.index }}" aria-controls="stop-panel-{{ forloop.index }}" aria-selected="{% if forloop.last %}true{% else %}false{% endif %}"{% unless forloop.last %} tabindex="-1"{% endunless %}><span class="stop-dot" aria-hidden="true">{% if x.logo %}<img src="{{ x.logo }}" alt="" width="44" height="44">{% else %}{{ x.abbr }}{% endif %}</span><span class="stop-name">{{ x.place }}</span><span class="stop-region">{{ x.region }}</span><span class="stop-year">{{ x.start | slice: 0, 4 }}</span></button></li>
       {% endfor %}
     </ol>
     <p class="route-legend" aria-hidden="true"><span><i class="line-E"></i>Research</span><span><i class="line-F"></i>Industry and government</span><span><i class="line-I"></i>Teaching</span></p>
@@ -158,7 +158,7 @@ nav: home
     <div class="route-panel" role="tabpanel" id="stop-panel-{{ forloop.index }}" aria-labelledby="stop-{{ forloop.index }}"{% unless forloop.last %} hidden{% endunless %}>
       <p class="date">{{ x.start | replace: "-", "/" }} – {{ x.end | replace: "-", "/" }} · {{ x.kind | capitalize }}</p>
       <h3>{{ x.role }}</h3>
-      <p class="org">{{ x.org }}</p>
+      <p class="org">{{ x.org }} · {{ x.place }}, {{ x.region }}</p>
       <ul>{% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}</ul>
     </div>
     {% endfor %}

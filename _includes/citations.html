@@ -1,19 +1,15 @@
 {% assign sc = site.data.scholar %}
-{% assign total = 0 %}{% for r in sc.by_year %}{% assign total = total | plus: r.citations %}{% endfor %}
+{% assign yearly = 0 %}{% for r in sc.by_year %}{% assign yearly = yearly | plus: r.citations %}{% endfor %}
 <div class="cites" data-cites>
   <div class="cites-head">
     <div>
-      <h3 class="cites-title">Citations per year</h3>
-      <p class="muted cites-src">Google Scholar, updated {{ sc.updated }}. <a href="{{ sc.profile }}" target="_blank" rel="noopener">Current profile</a></p>
+      <h3 class="cites-title">Cumulative citations</h3>
+      <p class="muted cites-src">Google Scholar, updated {{ sc.updated }}. <a href="{{ sc.profile }}" target="_blank" rel="noopener">Current profile</a>{% if yearly != sc.total %}<br>The chart sums Scholar's yearly counts ({{ yearly }}); the total of {{ sc.total }} includes citations Scholar does not assign to a year.{% endif %}</p>
     </div>
     <dl class="cites-stats">
-      <div><dt>Citations</dt><dd>{{ total }}</dd></div>
+      <div><dt>Citations</dt><dd>{{ sc.total }}</dd></div>
       <div><dt>h-index</dt><dd>{{ sc.h_index }}</dd></div>
     </dl>
-  </div>
-  <div class="seg" role="group" aria-label="Chart view" hidden>
-    <button type="button" class="seg-btn" data-mode="year" aria-pressed="true">Per year</button>
-    <button type="button" class="seg-btn" data-mode="cum" aria-pressed="false">Cumulative</button>
   </div>
   <div class="cites-plot" aria-hidden="true"></div>
   <div class="cites-tip" role="status" hidden></div>
