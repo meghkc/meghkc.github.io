@@ -1,0 +1,8 @@
+- group: Optimization
+  items: [Python, GurobiPy, CPLEX, GAMS, Google OR-Tools, R]
+- group: Machine learning
+  items: [PyTorch, DQN, PPO, MAPPO, MADDPG, scikit-learn, NLP, HPC]
+- group: Transportation modeling
+  items: [CUBE, TransCAD, VISSIM, Synchro, Biogeme, SmartRoad]
+- group: GIS and data
+  items: [ArcGIS Pro, ArcPy, QGIS, SQL, Pandas, Streamlit, StreetLight, INRIX]

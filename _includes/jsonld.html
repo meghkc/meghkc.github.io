@@ -1,0 +1,4 @@
+{% assign p = site.data.profile %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":{{ p.name | jsonify }},"url":{{ site.url | jsonify }},"image":"{{ site.url }}/{{ p.photo }}","jobTitle":"Transportation Engineer","worksFor":{"@type":"Organization","name":"California Department of Transportation"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"University at Buffalo, SUNY"},{"@type":"CollegeOrUniversity","name":"Utah State University"},{"@type":"CollegeOrUniversity","name":"Pokhara University"},{"@type":"CollegeOrUniversity","name":"Tribhuvan University"}],"sameAs":[{% for l in p.links %}{{ l.url | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>

@@ -1,0 +1,1 @@
+{% assign th = site.data.themes | where: "code", include.code | first %}<span class="line-dot line-{{ include.code }}" title="{{ th.name }}">{{ include.code }}</span>

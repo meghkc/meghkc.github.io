@@ -1,0 +1,39 @@
+- name: freight-analytics-dashboard
+  kind: Python package · PyPI
+  line: F
+  text: Interactive analytics for US rail and port freight, with a Streamlit app, a command-line tool and a Python API.
+  install: pip install freight-analytics-dashboard
+  links:
+    - { label: PyPI, url: "https://pypi.org/project/freight-analytics-dashboard/" }
+    - { label: Code, url: "https://github.com/meghkc/DashBoard" }
+    - { label: Live app, url: "https://meghkc-dashboard-freight-analysis.streamlit.app/" }
+- name: RL-ESB
+  kind: Research code
+  line: E
+  text: PPO-based deep RL framework for joint fleet assignment and charging of multi-line electric bus systems under uncertainty.
+  links:
+    - { label: Code, url: "https://github.com/meghkc/RL-ESB" }
+- name: Multi-school electric bus routing
+  kind: Research code
+  line: E
+  text: Two-stage routing, scheduling and on-route charging model for large multi-school electric bus networks.
+  links:
+    - { label: Code, url: "https://github.com/meghkc/Multi_School_multi_school_routing_and_scheduling" }
+- name: V2G school bus charging and battery sizing
+  kind: Research code
+  line: E
+  text: Joint optimization of charging, vehicle-to-grid discharge and battery size under time-of-use and demand charges.
+  links:
+    - { label: Code, url: "https://github.com/meghkc/Strategic-Charging-Decision-enabling-V2G-School-Buses-and-Optimum-Battery-Size" }
+- name: NREL-eFRISM
+  kind: Open-source tool
+  line: F
+  text: Electric freight truck routing with charging-station selection on US freight networks, solved with variable neighborhood search.
+  links:
+    - { label: Code, url: "https://github.com/meghkc/NREL-eFRISM" }
+- name: Space-time prism accessibility
+  kind: ArcPy automation
+  line: I
+  text: Automated space-time prism workflow in ArcGIS Pro measuring daily accessibility for people with and without disabilities.
+  links:
+    - { label: Code, url: "https://github.com/meghkc/Accessibility-Measures-by-using-Space-Time-Prism-Model" }

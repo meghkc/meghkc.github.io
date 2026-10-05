@@ -1,0 +1,56 @@
+# Sponsored research projects. role is Megh's role; at is where the work happened.
+- title: Freight VMT and Emissions Assessment Tool
+  sponsor: USDOT FHWA via NYMTC / NYSDOT
+  program: 9/11 Memorial Program for Regional Transportation Planning (PN23(07)8, Subaward 4024)
+  role: Subawardee PI, $35,000
+  at: NYC DOT · awarded Oct 2025
+  line: F
+  status: active
+- title: Multi-line electric bus scheduling and charging with deep RL
+  sponsor: University at Buffalo (dissertation)
+  role: Lead researcher
+  at: University at Buffalo
+  line: E
+  status: active
+- title: INFORMES, Intermodal Freight Optimization for a Resilient Mobility Energy System
+  sponsor: ARPA-E, US Department of Energy
+  role: Intern researcher at NREL
+  at: National Laboratory of the Rockies
+  line: F
+  status: done
+- title: SMART 2.0, Systems and Modeling for Accelerated Research in Transportation
+  sponsor: DOE Vehicle Technologies Office
+  role: Electric FRISM developer at NREL
+  at: National Laboratory of the Rockies
+  line: F
+  status: done
+- title: Route Optimization, On-route Charging and V2G Integration (ASPIRE)
+  sponsor: NSF Engineering Research Center
+  role: Graduate researcher
+  at: Utah State University
+  line: E
+  status: done
+- title: Increasing Affordability, Energy Efficiency, and Ridership of Transit Bus Systems through Large-Scale Electrification
+  sponsor: US Department of Energy
+  role: Graduate researcher
+  at: Utah State University
+  line: E
+  status: done
+- title: Feasibility of Electric Roadways through Localized Traffic, Cost, Adoption, and Environmental Impact Modeling
+  sponsor: ARPA-E, US Department of Energy
+  role: Graduate researcher
+  at: Utah State University
+  line: F
+  status: done
+- title: Alternative Fuel Vehicles in the UDOT Maintenance Fleet
+  sponsor: Utah Department of Transportation
+  role: Graduate researcher
+  at: Utah State University
+  line: E
+  status: done
+- title: Four-step Travel Demand Modeling for Individuals with Disabilities
+  sponsor: NIDILRR
+  role: Graduate researcher
+  at: Utah State University
+  line: I
+  status: done

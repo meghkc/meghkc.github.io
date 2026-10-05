@@ -1,0 +1,14 @@
+{% assign pb = include.p %}
+<li class="pub" data-line="{{ pb.line }}" data-status="{{ pb.status }}" data-year="{{ pb.year }}">
+  {% include line-badge.html code=pb.line %}
+  <div class="pub-body">
+    <p class="pub-title">{{ pb.title }}</p>
+    <p class="pub-meta">{{ pb.authors | replace: "KC, M. B.", "<b>KC, M. B.</b>" }} ({{ pb.year }}). <i>{{ pb.venue }}</i></p>
+    <p class="pub-links">
+      <span class="tag tag-{{ pb.status }}">{% case pb.status %}{% when "published" %}Published{% when "preprint" %}Preprint{% when "review" %}Under review{% else %}In preparation{% endcase %}</span>
+      {% if pb.doi %}<a href="https://doi.org/{{ pb.doi }}" target="_blank" rel="noopener">doi:{{ pb.doi }}</a>{% endif %}
+      {% if pb.pdf %}<a href="{{ pb.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+      <button class="cite-btn" type="button" data-cite="{{ pb.authors }} ({{ pb.year }}). {{ pb.title }}. {{ pb.venue }}.{% if pb.doi %} https://doi.org/{{ pb.doi }}{% endif %}">Copy citation</button>
+    </p>
+  </div>
+</li>

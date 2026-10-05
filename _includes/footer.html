@@ -1,0 +1,7 @@
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>© {{ site.time | date: "%Y" }} {{ site.data.profile.name }}</p>
+    <p class="foot-links">{% for l in site.data.profile.links %}<a href="{{ l.url }}" rel="noopener" target="_blank">{{ l.label }}</a>{% endfor %}</p>
+    <p class="muted">Updated {{ site.time | date: "%B %Y" }}</p>
+  </div>
+</footer>

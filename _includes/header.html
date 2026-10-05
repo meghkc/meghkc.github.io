@@ -1,0 +1,20 @@
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="./" aria-label="{{ site.data.profile.name }}, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7"/><path d="M7 21V11l5 6 5-6v10M21 11v10M21 16l5-5M22.5 15l3.5 6"/></svg>
+      <span>{{ site.data.profile.short_name }}</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      {% assign here = page.nav | default: "home" %}
+      <a href="./#research"{% if here == "research" %} aria-current="page"{% endif %}>Research</a>
+      <a href="publications.html"{% if here == "publications" %} aria-current="page"{% endif %}>Publications</a>
+      <a href="./#experience">Experience</a>
+      <a href="./#code">Code</a>
+      <a href="./#service">Service</a>
+      <a href="./#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" type="button" id="theme-btn" aria-label="Switch color theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+    </button>
+  </div>
+</header>

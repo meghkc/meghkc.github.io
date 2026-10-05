@@ -1,0 +1,42 @@
+name: Megh Bahadur KC
+short_name: Megh KC
+headline: Transportation Engineer, California Department of Transportation
+secondary: Ph.D. Candidate in Civil Engineering, University at Buffalo (SUNY)
+statement: >-
+  I build optimization models and reinforcement-learning agents that help transit agencies
+  electrify their bus fleets, and data tools that help cities plan cleaner freight.
+bio:
+  - >-
+    I am a Transportation Engineer at the California Department of Transportation (Caltrans), where I
+    develop sub-regional travel demand models and forecasts for traffic operations analysis and
+    environmental studies. I am completing my Ph.D. in Civil Engineering at the University at Buffalo,
+    SUNY (expected November 2026), advised by Dr. Ziqi Song.
+  - >-
+    My dissertation, <em>Accelerating Bus Transit Electrification through Optimization, Metaheuristics and
+    Reinforcement Learning Frameworks</em>, asks how agencies can schedule, charge and size electric bus
+    fleets when trips, traffic and electricity prices are uncertain. Before Buffalo I modelled national
+    freight flows at the National Laboratory of the Rockies (formerly NREL), built a freight VMT and
+    emissions tool for NYC DOT, and studied travel behavior of people with disabilities at Utah State University.
+  - >-
+    I came to research from practice: six years as a highway engineer and project manager with Nepal's
+    Ministry of Physical Infrastructure and Transport, plus university teaching in Nepal and the US.
+location: California, USA
+emails:
+  - kc.megh2048@gmail.com
+  - meghbaha@buffalo.edu
+cv: assets/Megh_recent%20CV.pdf
+photo: assets/profile_opt_q80_768w.webp
+photo_small: assets/profile_opt_q80_480w.webp
+links:
+  - { label: Google Scholar, url: "https://scholar.google.com/citations?user=-qMDe58AAAAJ" }
+  - { label: GitHub, url: "https://github.com/meghkc" }
+  - { label: LinkedIn, url: "https://www.linkedin.com/in/megh-kc-2015/" }
+  - { label: ResearchGate, url: "https://www.researchgate.net/profile/Megh-Kc" }
+formspree: https://formspree.io/f/xqabegaq
+interests:
+  - Operations research for electrified transportation systems
+  - Deep and multi-agent reinforcement learning for transit operations
+  - Multimodal freight modeling and supply chains
+  - ITS, connected and automated vehicles, digital twins
+  - Travel demand, discrete choice and agent-based modeling
+  - Inclusive transportation planning and geospatial analysis

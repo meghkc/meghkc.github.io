@@ -1,0 +1,32 @@
+# Research "lines". Each publication, talk and project is tagged with one line code.
+- code: E
+  name: Electrified transit
+  short: Bus and school-bus electrification
+  summary: >-
+    Fleet sizing, routing, timetabling and charging for battery-electric buses, from mixed-integer
+    models and metaheuristics to multi-agent deep reinforcement learning that reacts to delays,
+    demand and time-of-use prices in real time. Includes vehicle-to-grid revenue and battery sizing.
+  methods: [MILP, VNS metaheuristics, PPO / MAPPO, V2G, Gurobi, GAMS]
+- code: F
+  name: Freight systems
+  short: Freight modeling and policy
+  summary: >-
+    National containerized freight flows, intermodal resilience, electric truck routing and
+    city-scale freight policy screening: what congestion pricing, off-hour delivery and clean-truck
+    programs do to VMT, greenhouse gases and air quality.
+  methods: [FAF / CFS, VRP, OR-Tools, Four-step demand, StreetLight, INRIX]
+- code: I
+  name: Inclusive mobility
+  short: Travel behavior and accessibility
+  summary: >-
+    How people with disabilities choose travel modes and where to live, measured with discrete
+    choice models and space-time prism accessibility, to inform transit-oriented and
+    pedestrian-friendly planning.
+  methods: [Nested / multinomial logit, Biogeme, Space-time prisms, ArcPy, Land-use change]
+- code: P
+  name: Construction management
+  short: Procurement and bidding
+  summary: >-
+    Earlier work on public road procurement in Nepal: bidding trends, e-bidding effectiveness and
+    contract performance.
+  methods: [Survey analysis, Statistics]
