@@ -99,6 +99,16 @@ The design borrows from transit signage, which is your field:
 - **Presentations #1–7** stay out by choice.
 - Still to check: the dates of presentations #18 and #19 (shown as January 2026).
 
+## Round 3 (Oct 2026)
+
+- Education dates wrap instead of overlapping the degree name.
+- Citations: Scholar figures from Oct 2026 (65 total, h-index 4, per-year 2020–2026). Shown as one cumulative line with no gridlines; hover or tab to a year for its count.
+- Home hero: the USU bus photo is replaced by an animated electric bus network drawn in code (routes in the research-line colors, buses whose battery drains and refills at charging depots). It shows a still frame when the visitor prefers reduced motion and pauses when scrolled away.
+- Publications hero: the TRB podium photo is re-cropped so your head shows.
+- Experience route: each stop shows the city with state or country, and a badge with the organization's initials. Logos could not be downloaded from this environment. Drop a square logo into `assets/logos/` and add `logo: assets/logos/<file>` to that stop in `_data/experience.yml`.
+- Open question: the 2014 Lalitpur stop is the Tribhuvan University lecturer role from your CV. If NSET should be its own stop, send the role and dates.
+- Privacy: 13 original iPhone JPGs in `assets/project gallery/` still carry GPS coordinates in their metadata. The new site only uses the WebP copies, which have none, but the JPGs are still public in the repo.
+
 ## Custom domain
 
 Deploying this keeps meghkc.com. The `CNAME` file is unchanged and Jekyll copies it into the built site. GitHub Pages reads the domain from the repository settings, not from the page code. The site goes live once this branch is merged into `main`, the default branch, which Pages most likely publishes from (check Settings → Pages). The first build after the merge takes a minute or two, and HTTPS stays on.
